@@ -1,0 +1,55 @@
+{% load selectable_tags %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django-Selectable Example{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css" >
+    {% include_ui_theme %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    {{ form.media.css }}
+    {% block extra-css %}{% endblock %}
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Django-Selectable</a>
+                <div class="nav-collapse">
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <h1>Example Project</h1>
+    {% block content %}
+        <form action="" method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn">Submit</button>
+        </form>
+        {% if form.is_valid %}
+            <div>
+                <h2>Cleaned Data</h2>
+                <pre>{{ cleaned_data }}</pre>
+            </div>
+        {% endif %}
+        {% if raw_post %}
+            <div>
+                <h2>Raw POST data:</h2>
+                <pre>{{ raw_post }}</pre>
+            </div>
+        {% endif %}
+    {% endblock %}
+    </div>
+    {% include_jquery_libs %}
+    {{ form.media.js }}
+    {% block extra-js %}{% endblock %}
+</body>
+</html>

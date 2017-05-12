@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sectionOne</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Holograma 00, 0 y 2 (DF)</string>
+			<key>subtitle</key>
+			<string>$398</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>               Estado de México</string>
+			<key>subtitle</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Holograma 00</string>
+			<key>subtitle</key>
+			<string>$673</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Holograma 0</string>
+			<key>subtitle</key>
+			<string>$336.5</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Holograma 2</string>
+			<key>subtitle</key>
+			<string>$269</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Multa Extemporánea</string>
+			<key>subtitle</key>
+			<string>$1,345</string>
+		</dict>
+	</array>
+	<key>sectionTwo</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Más Información</string>
+			<key>target</key>
+			<string>tarifas.html</string>
+		</dict>
+	</array>
+	<key>footer</key>
+	<array>
+		<string>Tarifas vigentes 2014</string>
+	</array>
+	<key>salarioMinimo</key>
+	<string>67.29</string>
+</dict>
+</plist>

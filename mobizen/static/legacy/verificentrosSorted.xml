@@ -1,0 +1,3410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>ALVARO OBREGON</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>PROLONGACION SN.ANTONIO 705</string>
+				<key>Colonia</key>
+				<string>LOMAS DE BECERRA</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>54824062</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.3829</real>
+				<key>Longitud</key>
+				<real>-99.201806</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>INSURGENTES SUR 2358</string>
+				<key>Colonia</key>
+				<string>ERMITA SAN ANGEL</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56622481</string>
+				<key>Telefono2</key>
+				<string>56622810</string>
+				<key>Latitud</key>
+				<real>19.343307</real>
+				<key>Longitud</key>
+				<real>-99.18888699999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. VASCO DE QUIROGA 1845</string>
+				<key>Colonia</key>
+				<string>SANTA FE</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55708628</string>
+				<key>Telefono2</key>
+				<string>55708943</string>
+				<key>Latitud</key>
+				<real>19.379716</real>
+				<key>Longitud</key>
+				<real>-99.246044</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. LAS AGUILAS 969</string>
+				<key>Colonia</key>
+				<string>AMPLIACION LAS AGUILAS</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56354991</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.3507</real>
+				<key>Longitud</key>
+				<real>-99.22011000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SANTA LUCIA 814</string>
+				<key>Colonia</key>
+				<string>HOGAR Y REDENCION</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56602258</string>
+				<key>Telefono2</key>
+				<string>56602271</string>
+				<key>Latitud</key>
+				<real>19.37288</real>
+				<key>Longitud</key>
+				<real>-99.20747</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AVENIDA TAMAULIPAS 1240</string>
+				<key>Colonia</key>
+				<string>CORPUS CRISTY</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56372323</string>
+				<key>Telefono2</key>
+				<string>56375733</string>
+				<key>Latitud</key>
+				<real>19.36401</real>
+				<key>Longitud</key>
+				<real>-99.24729000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. VASCO DE QUIROGA 1494</string>
+				<key>Colonia</key>
+				<string>SANTA FE</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55706002</string>
+				<key>Telefono2</key>
+				<string>55706019</string>
+				<key>Latitud</key>
+				<real>19.383487</real>
+				<key>Longitud</key>
+				<real>-99.234307</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. 5 DE MAYO 467</string>
+				<key>Colonia</key>
+				<string>MERCED GOMEZ</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56602906</string>
+				<key>Telefono2</key>
+				<string>56602913</string>
+				<key>Latitud</key>
+				<real>19.36557</real>
+				<key>Longitud</key>
+				<real>-99.20677999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>RIO MIXCOAC 343</string>
+				<key>Colonia</key>
+				<string>AXOTLA</string>
+				<key>Delegacion</key>
+				<string>ALVARO OBREGON</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56626494</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.3603</real>
+				<key>Longitud</key>
+				<real>-99.17255</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>AZCAPOTZALCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. REFINERIA AZCAPOTZALCO 190</string>
+				<key>Colonia</key>
+				<string>SANTA INES</string>
+				<key>Delegacion</key>
+				<string>AZCAPOTZALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53947196</string>
+				<key>Telefono2</key>
+				<string>53826333</string>
+				<key>Latitud</key>
+				<real>19.49225</real>
+				<key>Longitud</key>
+				<real>-99.19058</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. DE LAS CULTURAS 33</string>
+				<key>Colonia</key>
+				<string>U.H. EL ROSARIO</string>
+				<key>Delegacion</key>
+				<string>AZCAPOTZALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53198073</string>
+				<key>Telefono2</key>
+				<string>53198074</string>
+				<key>Latitud</key>
+				<real>19.50856</real>
+				<key>Longitud</key>
+				<real>-99.20805</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CERRADA DE AV. DE LAS GRANJAS 61</string>
+				<key>Colonia</key>
+				<string>JARDIN AZPEITA</string>
+				<key>Delegacion</key>
+				<string>AZCAPOTZALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53520060</string>
+				<key>Telefono2</key>
+				<string>53520032</string>
+				<key>Latitud</key>
+				<real>19.487924</real>
+				<key>Longitud</key>
+				<real>-99.173498</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CENTEOLT 267</string>
+				<key>Colonia</key>
+				<string>INDUSTRIAL SAN ANTONIO</string>
+				<key>Delegacion</key>
+				<string>AZCAPOTZALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>52207532</string>
+				<key>Telefono2</key>
+				<string>52207533</string>
+				<key>Latitud</key>
+				<real>19.47925</real>
+				<key>Longitud</key>
+				<real>-99.19596</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. VALLEJO 520</string>
+				<key>Colonia</key>
+				<string>IND. VALLEJO</string>
+				<key>Delegacion</key>
+				<string>AZCAPOTZALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57191023</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.48055</real>
+				<key>Longitud</key>
+				<real>-99.14886</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>BENITO JUAREZ</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>GABRIEL MANCERA 305</string>
+				<key>Colonia</key>
+				<string>DEL VALLE</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56396616</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.39351</real>
+				<key>Longitud</key>
+				<real>-99.1626</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>LUIS SPOTA 24</string>
+				<key>Colonia</key>
+				<string>SAN SIMON TICUMAC</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56741028</string>
+				<key>Telefono2</key>
+				<string>56740790</string>
+				<key>Latitud</key>
+				<real>19.376753</real>
+				<key>Longitud</key>
+				<real>-99.141817</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>ANTONIO MAURA 107</string>
+				<key>Colonia</key>
+				<string>MODERNA</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56962038</string>
+				<key>Telefono2</key>
+				<string>55906749</string>
+				<key>Latitud</key>
+				<real>19.39518</real>
+				<key>Longitud</key>
+				<real>-99.13658</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. GABRIEL MANCERA 730</string>
+				<key>Colonia</key>
+				<string>DEL VALLE</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56693950</string>
+				<key>Telefono2</key>
+				<string>56693915</string>
+				<key>Latitud</key>
+				<real>19.387945</real>
+				<key>Longitud</key>
+				<real>-99.16386</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>RODRIGUEZ SARO 410</string>
+				<key>Colonia</key>
+				<string>DEL VALLE</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55245670</string>
+				<key>Telefono2</key>
+				<string>55246112</string>
+				<key>Latitud</key>
+				<real>19.36533</real>
+				<key>Longitud</key>
+				<real>-99.17388</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CUMBRES DE MALTRATA PONIENTE 422</string>
+				<key>Colonia</key>
+				<string>NARVARTE</string>
+				<key>Delegacion</key>
+				<string>BENITO JUAREZ</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56820133</string>
+				<key>Telefono2</key>
+				<string>56820383</string>
+				<key>Latitud</key>
+				<real>19.388785</real>
+				<key>Longitud</key>
+				<real>-99.148554</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>COYOACÁN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>PROL. EJE CENTRAL LÁZARO CÁRDENAS 120</string>
+				<key>Colonia</key>
+				<string>LA CANDELARIA</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56106585</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.42012</real>
+				<key>Longitud</key>
+				<real>-99.14343</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SANTA ANA 327</string>
+				<key>Colonia</key>
+				<string>PRESIDENTES EJIDALES 2DA. SECC.</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56564642</string>
+				<key>Telefono2</key>
+				<string>56955981</string>
+				<key>Latitud</key>
+				<real>19.32933</real>
+				<key>Longitud</key>
+				<real>-99.12322</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. PACIFICO 293</string>
+				<key>Colonia</key>
+				<string>LOS REYES DE COYOACÁN</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55440339</string>
+				<key>Telefono2</key>
+				<string>56174371</string>
+				<key>Latitud</key>
+				<real>19.33567</real>
+				<key>Longitud</key>
+				<real>-99.14848000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>RANCHO SAN LORENZO 153</string>
+				<key>Colonia</key>
+				<string>GIRASOLES </string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56796988</string>
+				<key>Telefono2</key>
+				<string>56790307</string>
+				<key>Latitud</key>
+				<real>19.30567</real>
+				<key>Longitud</key>
+				<real>-99.12672999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>28 DE DICIEMBRE 17</string>
+				<key>Colonia</key>
+				<string>EMILIANO ZAPATA</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56792028</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.327844</real>
+				<key>Longitud</key>
+				<real>-99.137235</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DEL HUESO 570</string>
+				<key>Colonia</key>
+				<string>EXHACIENDA DE COAPA</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56792230</string>
+				<key>Telefono2</key>
+				<string>56792330</string>
+				<key>Latitud</key>
+				<real>19.30372</real>
+				<key>Longitud</key>
+				<real>-99.1236</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>ANAHUAC 139</string>
+				<key>Colonia</key>
+				<string>EL MIRADOR EXHACIENDA DE COAPA</string>
+				<key>Delegacion</key>
+				<string>COYOACÁN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56034218</string>
+				<key>Telefono2</key>
+				<string>56034219</string>
+				<key>Latitud</key>
+				<real>19.30432</real>
+				<key>Longitud</key>
+				<real>-99.10992</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CUAJIMALPA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA FED MEXICO TOLUCA 5395</string>
+				<key>Colonia</key>
+				<string>EL MOLINO</string>
+				<key>Delegacion</key>
+				<string>CUAJIMALPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>52920097</string>
+				<key>Telefono2</key>
+				<string>52922105</string>
+				<key>Latitud</key>
+				<real>19.362834</real>
+				<key>Longitud</key>
+				<real>-99.285212</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CUAUHTEMOC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CUAUHTEMOC 85</string>
+				<key>Colonia</key>
+				<string>ROMA</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55254441</string>
+				<key>Telefono2</key>
+				<string>55254430</string>
+				<key>Latitud</key>
+				<real>19.42214</real>
+				<key>Longitud</key>
+				<real>-99.15403999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. GUERRERO 55</string>
+				<key>Colonia</key>
+				<string>GUERRERO</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55462920</string>
+				<key>Telefono2</key>
+				<string>55464593</string>
+				<key>Latitud</key>
+				<real>19.44082</real>
+				<key>Longitud</key>
+				<real>-99.14863</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>BAJIO 322</string>
+				<key>Colonia</key>
+				<string>ROMA SUR</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55847379</string>
+				<key>Telefono2</key>
+				<string>55741175</string>
+				<key>Latitud</key>
+				<real>19.402786</real>
+				<key>Longitud</key>
+				<real>-99.168375</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DE GUADALUPE 70</string>
+				<key>Colonia</key>
+				<string>EXHIPODROMO DE PERALVILLO</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55264284</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.45676</real>
+				<key>Longitud</key>
+				<real>-99.12851999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>ALVARO OBREGON 271</string>
+				<key>Colonia</key>
+				<string>ROMA</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55145544</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.41695</real>
+				<key>Longitud</key>
+				<real>-99.16764999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>DR. NAVARRO 4</string>
+				<key>Colonia</key>
+				<string>DOCTORES</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55780536</string>
+				<key>Telefono2</key>
+				<string>55780542</string>
+				<key>Latitud</key>
+				<real>19.42043</real>
+				<key>Longitud</key>
+				<real>-99.14376</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>INSURGENTES SUR 211</string>
+				<key>Colonia</key>
+				<string>ROMA</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>54824065</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.42005</real>
+				<key>Longitud</key>
+				<real>-99.16413</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>MANUEL MARIA CONTRERAS 16</string>
+				<key>Colonia</key>
+				<string>SAN RAFAEL</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57033612</string>
+				<key>Telefono2</key>
+				<string>57032794</string>
+				<key>Latitud</key>
+				<real>19.44191</real>
+				<key>Longitud</key>
+				<real>-99.16405</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>DR. BARRAGAN 188</string>
+				<key>Colonia</key>
+				<string>DOCTORES</string>
+				<key>Delegacion</key>
+				<string>CUAUHTEMOC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55787907</string>
+				<key>Telefono2</key>
+				<string>55789913</string>
+				<key>Latitud</key>
+				<real>19.4152</real>
+				<key>Longitud</key>
+				<real>-99.1452</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>GUSTAVO A MADERO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CONGRESO DE LA UNION 5631</string>
+				<key>Colonia</key>
+				<string>3 ESTRELLAS</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57606333</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.467103</real>
+				<key>Longitud</key>
+				<real>-99.110308</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZADA DE GUADALUPE 296</string>
+				<key>Colonia</key>
+				<string>VALLEJO</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55375416</string>
+				<key>Telefono2</key>
+				<string>55375187</string>
+				<key>Latitud</key>
+				<real>19.45674</real>
+				<key>Longitud</key>
+				<real>-99.12857</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AVENIDA 510 340</string>
+				<key>Colonia</key>
+				<string>SAN JUAN DE ARAGON</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>54824061</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.46491</real>
+				<key>Longitud</key>
+				<real>-99.08402</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CONGRESO DE LA UNION 38</string>
+				<key>Colonia</key>
+				<string>GRANJAS MODERNAS</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57816582</string>
+				<key>Telefono2</key>
+				<string>55771533</string>
+				<key>Latitud</key>
+				<real>19.47928</real>
+				<key>Longitud</key>
+				<real>-99.10697999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE 14 264</string>
+				<key>Colonia</key>
+				<string>GUADALUPE PROLETARIA</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53675136</string>
+				<key>Telefono2</key>
+				<string>53675138</string>
+				<key>Latitud</key>
+				<real>19.522971</real>
+				<key>Longitud</key>
+				<real>-99.156801</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>JOSE URBANO FONSECA 311</string>
+				<key>Colonia</key>
+				<string>CAPULTITLAN</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55772557</string>
+				<key>Telefono2</key>
+				<string>55772573</string>
+				<key>Latitud</key>
+				<real>19.48023</real>
+				<key>Longitud</key>
+				<real>-99.13105</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>JOSE URBANO FONSECA 362</string>
+				<key>Colonia</key>
+				<string>CAPULTITLAN</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57819713</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.48079</real>
+				<key>Longitud</key>
+				<real>-99.13343999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>JUPITER 70</string>
+				<key>Colonia</key>
+				<string>NUEVA INDUSTRIAL VALLEJO</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57540314</string>
+				<key>Telefono2</key>
+				<string>57540318</string>
+				<key>Latitud</key>
+				<real>19.51134</real>
+				<key>Longitud</key>
+				<real>-99.15423</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CUAUTEPEC 101</string>
+				<key>Colonia</key>
+				<string>JORGE NEGRETE</string>
+				<key>Delegacion</key>
+				<string>GUSTAVO A MADERO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53693652</string>
+				<key>Telefono2</key>
+				<string>53693530</string>
+				<key>Latitud</key>
+				<real>19.52748</real>
+				<key>Longitud</key>
+				<real>-99.14219</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>IZTACALCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>VAINILLA 248</string>
+				<key>Colonia</key>
+				<string>GRANJAS MEXICO</string>
+				<key>Delegacion</key>
+				<string>IZTACALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56499643</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.401175</real>
+				<key>Longitud</key>
+				<real>-99.100765</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZADA DE LA VIGA 461</string>
+				<key>Colonia</key>
+				<string>VIADUCTO PIEDAD</string>
+				<key>Delegacion</key>
+				<string>IZTACALCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55385437</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.402235</real>
+				<key>Longitud</key>
+				<real>-99.125224</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>IZTAPALAPA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>PEDRO ACEVEZ 70</string>
+				<key>Colonia</key>
+				<string>SANTA MARTHA ACATITLA</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57335157</string>
+				<key>Telefono2</key>
+				<string>57347163</string>
+				<key>Latitud</key>
+				<real>19.36741</real>
+				<key>Longitud</key>
+				<real>-99.01823</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>JAVIER ROJO GOMEZ 554</string>
+				<key>Colonia</key>
+				<string>GUADALUPE DEL MORAL</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56862916</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.38043</real>
+				<key>Longitud</key>
+				<real>-99.09018</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZADA ERMITA IZTAPALAPA 4054</string>
+				<key>Colonia</key>
+				<string>SANTA MARTHA ACATITLA</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>54824063</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.356321</real>
+				<key>Longitud</key>
+				<real>-99.005847</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. TAXQUEÑA 2395</string>
+				<key>Colonia</key>
+				<string>SAN FRANCISCO CULHUACAN</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>54824064</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.338573</real>
+				<key>Longitud</key>
+				<real>-99.112317</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. IGNACIO ZARAGOZA 1444</string>
+				<key>Colonia</key>
+				<string>JUAN ESCUTIA</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55580101</string>
+				<key>Telefono2</key>
+				<string>57014551</string>
+				<key>Latitud</key>
+				<real>19.3951</real>
+				<key>Longitud</key>
+				<real>-99.05224</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>SUR 125-A 9</string>
+				<key>Colonia</key>
+				<string>LOS CIPRESES</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56461958</string>
+				<key>Telefono2</key>
+				<string>56461961</string>
+				<key>Latitud</key>
+				<real>19.35592</real>
+				<key>Longitud</key>
+				<real>-99.10821</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. ERMITA IZTAPALAPA 1891</string>
+				<key>Colonia</key>
+				<string>LOS ANGELES</string>
+				<key>Delegacion</key>
+				<string>IZTAPALAPA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>59708889</string>
+				<key>Telefono2</key>
+				<string>59708882</string>
+				<key>Latitud</key>
+				<real>19.34989</real>
+				<key>Longitud</key>
+				<real>-99.07239</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>MAGDALENA CONTRERAS</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. MEXICO 1249</string>
+				<key>Colonia</key>
+				<string>LA CRUZ</string>
+				<key>Delegacion</key>
+				<string>MAGDALENA CONTRERAS</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55682479</string>
+				<key>Telefono2</key>
+				<string>55682026</string>
+				<key>Latitud</key>
+				<real>19.3096</real>
+				<key>Longitud</key>
+				<real>-99.23112999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SAN GERONOMO 1887</string>
+				<key>Colonia</key>
+				<string>EL TORO</string>
+				<key>Delegacion</key>
+				<string>MAGDALENA CONTRERAS</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56681495</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.31297</real>
+				<key>Longitud</key>
+				<real>-99.2439</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>MIGUEL HIDALGO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>RODOLFO GAONA 86</string>
+				<key>Colonia</key>
+				<string>LOMAS DE SOTELO</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55574043</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.452102</real>
+				<key>Longitud</key>
+				<real>-99.218101</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. MEXICO TACUBA 1292</string>
+				<key>Colonia</key>
+				<string>ARGENTINA</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53862196</string>
+				<key>Telefono2</key>
+				<string>53861782</string>
+				<key>Latitud</key>
+				<real>19.4571</real>
+				<key>Longitud</key>
+				<real>-99.20594</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DE LOS GALLOS 1</string>
+				<key>Colonia</key>
+				<string>AGRICULTURA</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>53410448</string>
+				<key>Telefono2</key>
+				<string>53418930</string>
+				<key>Latitud</key>
+				<real>19.456095</real>
+				<key>Longitud</key>
+				<real>-99.164316</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>MARIANO ESCOBEDO 164</string>
+				<key>Colonia</key>
+				<string>ANAHUAC</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55455382</string>
+				<key>Telefono2</key>
+				<string>55450421</string>
+				<key>Latitud</key>
+				<real>19.4456</real>
+				<key>Longitud</key>
+				<real>-99.18249</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE DEL LAGO HIELMAR 23</string>
+				<key>Colonia</key>
+				<string>PENSIL</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55450574</string>
+				<key>Telefono2</key>
+				<string>55457680</string>
+				<key>Latitud</key>
+				<real>19.44622</real>
+				<key>Longitud</key>
+				<real>-99.19171</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>TONATZIN 93</string>
+				<key>Colonia</key>
+				<string>TLAXPANA</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55462592</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.43996</real>
+				<key>Longitud</key>
+				<real>-99.17102</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>JOSE MARTI 147</string>
+				<key>Colonia</key>
+				<string>ESCANDON</string>
+				<key>Delegacion</key>
+				<string>MIGUEL HIDALGO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>55160425</string>
+				<key>Telefono2</key>
+				<string>55160426</string>
+				<key>Latitud</key>
+				<real>19.402613</real>
+				<key>Longitud</key>
+				<real>-99.178735</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TLAHUAC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>LA TURBA 68</string>
+				<key>Colonia</key>
+				<string>GRANJAS CABRERA</string>
+				<key>Delegacion</key>
+				<string>TLAHUAC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56767271</string>
+				<key>Telefono2</key>
+				<string>56530949</string>
+				<key>Latitud</key>
+				<real>19.30357</real>
+				<key>Longitud</key>
+				<real>-99.06419</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SAN FRANCISCO 29</string>
+				<key>Colonia</key>
+				<string>GUADALUPE TLALTENCO</string>
+				<key>Delegacion</key>
+				<string>TLAHUAC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>58410991</string>
+				<key>Telefono2</key>
+				<string>58410992</string>
+				<key>Latitud</key>
+				<real>19.29742</real>
+				<key>Longitud</key>
+				<real>-99.00869</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>MAR DEL NECTAR 115</string>
+				<key>Colonia</key>
+				<string>EL TRIANGULO</string>
+				<key>Delegacion</key>
+				<string>TLAHUAC</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>58412613</string>
+				<key>Telefono2</key>
+				<string>58413017</string>
+				<key>Latitud</key>
+				<real>19.283222</real>
+				<key>Longitud</key>
+				<real>-99.011</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TLALPAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA PICACHO AJUSCO 933</string>
+				<key>Colonia</key>
+				<string>HEROES DE PADIERNA</string>
+				<key>Delegacion</key>
+				<string>TLALPAN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56305717</string>
+				<key>Telefono2</key>
+				<string>56305718</string>
+				<key>Latitud</key>
+				<real>19.28097</real>
+				<key>Longitud</key>
+				<real>-99.21487</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DEL HUESO 969</string>
+				<key>Colonia</key>
+				<string>GRANJAS DE COAPA</string>
+				<key>Delegacion</key>
+				<string>TLALPAN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56711819</string>
+				<key>Telefono2</key>
+				<string>56712086</string>
+				<key>Latitud</key>
+				<real>19.327844</real>
+				<key>Longitud</key>
+				<real>-99.137235</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>FRANCISCO VILLA 58</string>
+				<key>Colonia</key>
+				<string>SAN BARTOLO EL CHICO</string>
+				<key>Delegacion</key>
+				<string>TLALPAN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56838113</string>
+				<key>Telefono2</key>
+				<string>56739445</string>
+				<key>Latitud</key>
+				<real>19.28543</real>
+				<key>Longitud</key>
+				<real>-99.12891999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>SAN JUAN BOSCO 19</string>
+				<key>Colonia</key>
+				<string>HUIPULCO</string>
+				<key>Delegacion</key>
+				<string>TLALPAN</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56550829</string>
+				<key>Telefono2</key>
+				<string>56550764</string>
+				<key>Latitud</key>
+				<real>19.2976</real>
+				<key>Longitud</key>
+				<real>-99.14961</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>VENUSTIANO CARRANZA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>NORTE 25 4</string>
+				<key>Colonia</key>
+				<string>MOCTEZUMA 2DA. SECCION</string>
+				<key>Delegacion</key>
+				<string>VENUSTIANO CARRANZA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57845558</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.43638</real>
+				<key>Longitud</key>
+				<real>-99.10357</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AVIACION MILITAR 24</string>
+				<key>Colonia</key>
+				<string>FRACC. INDUSTRIAL PUERTO AEREO</string>
+				<key>Delegacion</key>
+				<string>VENUSTIANO CARRANZA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57628734</string>
+				<key>Telefono2</key>
+				<string>57628735</string>
+				<key>Latitud</key>
+				<real>19.42305</real>
+				<key>Longitud</key>
+				<real>-99.09353</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>ORIENTE 174 505</string>
+				<key>Colonia</key>
+				<string>MOCTEZUMA 2A. SECC.</string>
+				<key>Delegacion</key>
+				<string>VENUSTIANO CARRANZA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>31830320</string>
+				<key>Telefono2</key>
+				<string>31830322</string>
+				<key>Latitud</key>
+				<real>19.43795</real>
+				<key>Longitud</key>
+				<real>-99.0902255</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DE LA VIGA 222-B</string>
+				<key>Colonia</key>
+				<string>ARTES GRAFICAS</string>
+				<key>Delegacion</key>
+				<string>VENUSTIANO CARRANZA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57400405</string>
+				<key>Telefono2</key>
+				<string>57400618</string>
+				<key>Latitud</key>
+				<real>19.41127</real>
+				<key>Longitud</key>
+				<real>-99.12754</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>BABIT 50</string>
+				<key>Colonia</key>
+				<string>FELIPE ANGELES</string>
+				<key>Delegacion</key>
+				<string>VENUSTIANO CARRANZA</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>57042737</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.45502</real>
+				<key>Longitud</key>
+				<real>-99.11404</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>XOCHIMILCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. GUADALUPE I. RAMIREZ 679</string>
+				<key>Colonia</key>
+				<string>LA NORIA</string>
+				<key>Delegacion</key>
+				<string>XOCHIMILCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56767271</string>
+				<key>Telefono2</key>
+				<string>56530949</string>
+				<key>Latitud</key>
+				<real>19.26875</real>
+				<key>Longitud</key>
+				<real>-99.12672000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CAMINO A NATIVITAS 471</string>
+				<key>Colonia</key>
+				<string>BARRIO XALTOCAN</string>
+				<key>Delegacion</key>
+				<string>XOCHIMILCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56752223</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.25128</real>
+				<key>Longitud</key>
+				<real>-99.0988</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>NUEVO LEON 69</string>
+				<key>Colonia</key>
+				<string>BARRIO SAN CRISTOBAL</string>
+				<key>Delegacion</key>
+				<string>XOCHIMILCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>56538706</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.26235</real>
+				<key>Longitud</key>
+				<real>-99.10008999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. MEXICO ORIENTE 377</string>
+				<key>Colonia</key>
+				<string>SAN GREGORIO ATLAPULCO</string>
+				<key>Delegacion</key>
+				<string>XOCHIMILCO</string>
+				<key>Ciudad</key>
+				<string>DISTRITO FEDERAL</string>
+				<key>Telefono1</key>
+				<string>58432561</string>
+				<key>Telefono2</key>
+				<string>58432554</string>
+				<key>Latitud</key>
+				<real>19.25296</real>
+				<key>Longitud</key>
+				<real>-99.05277</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>AMECAMECA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>PROLONGACION ALDAMA 3</string>
+				<key>Colonia</key>
+				<string>VECINAL Y CUAUHTEMOC</string>
+				<key>Delegacion</key>
+				<string>AMECAMECA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>015(97)9782363</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.11277</real>
+				<key>Longitud</key>
+				<real>-98.77949</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>ATIZAPAN DE ZARAGOZA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>BLVD. ADOLFO LOPEZ MATEOS 65</string>
+				<key>Colonia</key>
+				<string>EL POTRERO</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53625955</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.54315</real>
+				<key>Longitud</key>
+				<real>-99.23384</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>KM. 9.5 CARRETERA ATIZAPAN DE ZARAGOZA-VILLA NICOLAS ROMERO</string>
+				<key>Colonia</key>
+				<string>INDUSTRIAL DEL PEDREGAL</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58259627</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.57762</real>
+				<key>Longitud</key>
+				<real>-99.25939</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. ADOLFO LOPEZ MATEOS 21</string>
+				<key>Colonia</key>
+				<string>BARRIO NORTE</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58224988</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.565578</real>
+				<key>Longitud</key>
+				<real>-99.252591</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. HIDALGO 117</string>
+				<key>Colonia</key>
+				<string>SAN MATEO TECOLOAPAN</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53709215</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.58166</real>
+				<key>Longitud</key>
+				<real>-99.2266</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SAN VICENTE 30</string>
+				<key>Colonia</key>
+				<string>SAN MIGUEL XOCHIMANGA</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53704488</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.57538</real>
+				<key>Longitud</key>
+				<real>-99.21865</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>PIONEROS DEL COOPERATIVISMO 75</string>
+				<key>Colonia</key>
+				<string>MEXICO NUEVO</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58163481</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.55483</real>
+				<key>Longitud</key>
+				<real>-99.27003999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>BOULEVARD IGNACIO ZARAGOZA MZ. 47, LT. 47</string>
+				<key>Colonia</key>
+				<string>MEXICO 86</string>
+				<key>Delegacion</key>
+				<string>ATIZAPAN DE ZARAGOZA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>38680112</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.59417</real>
+				<key>Longitud</key>
+				<real>-99.24951</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>ATLACOMULCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>LIBRAMIENTO JORGE JIMENEZ CANTU S/N</string>
+				<key>Colonia</key>
+				<string>SAN MARTIN</string>
+				<key>Delegacion</key>
+				<string>ATLACOMULCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01 (722) 1246324</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.78848</real>
+				<key>Longitud</key>
+				<real>-99.87860000000001</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CHALCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA MEXICO-CUAUTLA S/N, KM. 38.5</string>
+				<key>Colonia</key>
+				<string>LAS GRANJAS</string>
+				<key>Delegacion</key>
+				<string>CHALCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>(597) 53377</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.25602</real>
+				<key>Longitud</key>
+				<real>-98.88719</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA MEXICO-CUAUTLA KM 39</string>
+				<key>Colonia</key>
+				<string>CHALCO</string>
+				<key>Delegacion</key>
+				<string>CHALCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>59752329</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.25065</real>
+				<key>Longitud</key>
+				<real>-98.87585</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CHIMALHUACAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARR. MEXICO-TEXCOCO KM. 25.5</string>
+				<key>Colonia</key>
+				<string>CHIMALHUCAN</string>
+				<key>Delegacion</key>
+				<string>CHIMALHUACAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>10570083</string>
+				<key>Telefono2</key>
+				<string>10572046</string>
+				<key>Latitud</key>
+				<real>19.391983</real>
+				<key>Longitud</key>
+				<real>-98.934693</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. DEL PEÑON MZ2</string>
+				<key>Colonia</key>
+				<string>CIENEGUITAS, BARRIO DE XOCHITENCO</string>
+				<key>Delegacion</key>
+				<string>CHIMALHUACAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58526654</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.42742</real>
+				<key>Longitud</key>
+				<real>-98.96426700000001</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>COACALCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. EJE 8 5</string>
+				<key>Colonia</key>
+				<string>LA MAGDALENA</string>
+				<key>Delegacion</key>
+				<string>COACALCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58658590</string>
+				<key>Telefono2</key>
+				<string>58658595</string>
+				<key>Latitud</key>
+				<real>19.63238</real>
+				<key>Longitud</key>
+				<real>-99.09084</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. JOSE LOPEZ PORTILLO 77</string>
+				<key>Colonia</key>
+				<string>COACALCO CENTRO</string>
+				<key>Delegacion</key>
+				<string>COACALCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>21592138</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.63546</real>
+				<key>Longitud</key>
+				<real>-99.10346</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CUAUTITLAN IZCALLI</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CALZ. DE GUADALUPE 527-B</string>
+				<key>Colonia</key>
+				<string>EL CERRITO</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58700529</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.66868</real>
+				<key>Longitud</key>
+				<real>-99.19231000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. PRIMERO DE MAYO 104</string>
+				<key>Colonia</key>
+				<string>CENTRO URBANO</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58810334</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.6616</real>
+				<key>Longitud</key>
+				<real>-99.21078</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SULTEPEC  MZ. 14, LT. 27</string>
+				<key>Colonia</key>
+				<string>CENTRO URBANO</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58813600</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.640549</real>
+				<key>Longitud</key>
+				<real>-99.20452299999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>KM 38 AUTOPISTA MEXICO-QUERETARO</string>
+				<key>Colonia</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58813326</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.668958</real>
+				<key>Longitud</key>
+				<real>-99.199966</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. FRESNOS 14</string>
+				<key>Colonia</key>
+				<string>ARCOS DEL ALBA</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58813736</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.65011</real>
+				<key>Longitud</key>
+				<real>-99.19991</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. HIDALGO SUR 3</string>
+				<key>Colonia</key>
+				<string>SAN MARTIN TEPETLIXPAN</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>26023019</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.61755</real>
+				<key>Longitud</key>
+				<real>-99.19307000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CIRCUITO BOSQUES DE BOLOGNIA 160</string>
+				<key>Colonia</key>
+				<string>BOSQUES DEL LAGO</string>
+				<key>Delegacion</key>
+				<string>CUAUTITLAN IZCALLI</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58770773</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.61632</real>
+				<key>Longitud</key>
+				<real>-99.23990999999999</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>ECATEPEC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. VIA LOPEZ PORTILLO 402</string>
+				<key>Colonia</key>
+				<string>GUADALUPE VICTORIA</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58822613</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.61778</real>
+				<key>Longitud</key>
+				<real>-99.06622</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CENTRAL 241</string>
+				<key>Colonia</key>
+				<string>VALLE DE ARAGON 3RA SECC.</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>51216412</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.50079</real>
+				<key>Longitud</key>
+				<real>-99.04283</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CENTRAL MZ. 21 LT. 8</string>
+				<key>Colonia</key>
+				<string>OLIMPICA</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57886537</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.52552</real>
+				<key>Longitud</key>
+				<real>-99.03229</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. MEXICO 62</string>
+				<key>Colonia</key>
+				<string>LOS LAURELES</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57876498</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.58477</real>
+				<key>Longitud</key>
+				<real>-99.04044</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CHABACANO MZ. 396, LT. 10</string>
+				<key>Colonia</key>
+				<string>GRANJAS INDEPENDENCIA</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>51203723</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.49279</real>
+				<key>Longitud</key>
+				<real>-99.03285</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>FRANCISCO MURGUIA MZ. 63 LT. 6</string>
+				<key>Colonia</key>
+				<string>GRANJAS VALLE DE GUADALUPE</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57558774</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.50997</real>
+				<key>Longitud</key>
+				<real>-99.06738</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE HIDALGO 52</string>
+				<key>Colonia</key>
+				<string>CENTRO ECATEPEC</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>15504617</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.60106</real>
+				<key>Longitud</key>
+				<real>-99.04602</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. NACIONAL 2</string>
+				<key>Colonia</key>
+				<string>VENTA DE CARPIO</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58384372</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.62073</real>
+				<key>Longitud</key>
+				<real>-99.00351000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>VIA MORELOS 41</string>
+				<key>Colonia</key>
+				<string>CUAUHTEMOC XALOSTOC</string>
+				<key>Delegacion</key>
+				<string>ECATEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57552738</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.52941</real>
+				<key>Longitud</key>
+				<real>-99.07595999999999</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>HUIXQUILUCAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>VIA MAGNA 23</string>
+				<key>Colonia</key>
+				<string>CENTRO URBANO SAN FERNANDO LA HERRADURA</string>
+				<key>Delegacion</key>
+				<string>HUIXQUILUCAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>52914604</string>
+				<key>Telefono2</key>
+				<string>52914609</string>
+				<key>Latitud</key>
+				<real>19.40055</real>
+				<key>Longitud</key>
+				<real>-99.27786999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>PARAJE PARAISO S/N</string>
+				<key>Colonia</key>
+				<string>MAGDALENA CHICHICASPA</string>
+				<key>Delegacion</key>
+				<string>HUIXQUILUCAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>82881351</string>
+				<key>Telefono2</key>
+				<string>82881352</string>
+				<key>Latitud</key>
+				<real>19.40428</real>
+				<key>Longitud</key>
+				<real>-99.33028</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>IXTAPALUCA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CUAUHTEMOC 21</string>
+				<key>Colonia</key>
+				<string>ZOQUIAPAN</string>
+				<key>Delegacion</key>
+				<string>IXTAPALUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>59723835</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.31573</real>
+				<key>Longitud</key>
+				<real>-98.87631</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>PASEO DE LOS ENCINOS</string>
+				<key>Colonia</key>
+				<string>SANTA BARBARA IXTAPALUCA</string>
+				<key>Delegacion</key>
+				<string>IXTAPALUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>59724588</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.31212</real>
+				<key>Longitud</key>
+				<real>-98.8991</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>JILOTEPEC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA JILOTEPEC-IXTLAHUACA KM. 1</string>
+				<key>Colonia</key>
+				<string>COMUNIDAD DE LAS MANZANAS</string>
+				<key>Delegacion</key>
+				<string>JILOTEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(761)7342945</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.9647</real>
+				<key>Longitud</key>
+				<real>-99.53203999999999</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>LOS REYES LA PAZ</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CDA. DE LA AUTOPISTA 30</string>
+				<key>Colonia</key>
+				<string>LOS REYES ACAQUILPAN</string>
+				<key>Delegacion</key>
+				<string>LOS REYES LA PAZ</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58567109</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.35531</real>
+				<key>Longitud</key>
+				<real>-98.99012399999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. TEXCOCO 81</string>
+				<key>Colonia</key>
+				<string>LOS REYES</string>
+				<key>Delegacion</key>
+				<string>LOS REYES LA PAZ</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58575748</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.36062</real>
+				<key>Longitud</key>
+				<real>-98.97377</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. TEXCOCO 748B</string>
+				<key>Colonia</key>
+				<string>FRACCIONAMIENTO FLORESTA</string>
+				<key>Delegacion</key>
+				<string>LOS REYES LA PAZ</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57325481</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.36701</real>
+				<key>Longitud</key>
+				<real>-98.99074</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>MELCHOR OCAMPO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>BOULEVARD CENTENARIO E HIMNO NACIONAL 35</string>
+				<key>Colonia</key>
+				<string>SAN ISIDRO</string>
+				<key>Delegacion</key>
+				<string>MELCHOR OCAMPO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58782574</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.70822</real>
+				<key>Longitud</key>
+				<real>-99.14269</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>METEPEC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE 27 DE SEPTIEMBRE 41</string>
+				<key>Colonia</key>
+				<string>SAN JERONIMO CHICAHUALCO</string>
+				<key>Delegacion</key>
+				<string>METEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>017221991583</string>
+				<key>Telefono2</key>
+				<string>1991544</string>
+				<key>Latitud</key>
+				<real>19.27752</real>
+				<key>Longitud</key>
+				<real>-99.59399000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. HERIBERTO ENRIQUEZ 362</string>
+				<key>Colonia</key>
+				<string>REAL DE SAN JAVIER</string>
+				<key>Delegacion</key>
+				<string>METEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>017222194888</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.26341</real>
+				<key>Longitud</key>
+				<real>-99.64493</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA TOLUCA-TENANGO 639</string>
+				<key>Colonia</key>
+				<string>LA PURISIMA</string>
+				<key>Delegacion</key>
+				<string>METEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>017222191919</string>
+				<key>Telefono2</key>
+				<string>2191918</string>
+				<key>Latitud</key>
+				<real>19.2629</real>
+				<key>Longitud</key>
+				<real>-99.6311</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>NAUCALPAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>VIA GUSTAVO BAZ 40</string>
+				<key>Colonia</key>
+				<string>SAN LUIS TLATILCO</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55760972</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.46814</real>
+				<key>Longitud</key>
+				<real>-99.23674</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>ALAMO 45</string>
+				<key>Colonia</key>
+				<string>SANTIAGO OCCIPACO</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53441811</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.50103</real>
+				<key>Longitud</key>
+				<real>-99.25279</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. UNIVERSIDAD 61</string>
+				<key>Colonia</key>
+				<string>PARQUE INDUSTRIAL NAUCALPAN</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53591941</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.47234</real>
+				<key>Longitud</key>
+				<real>-99.23895</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. TARAHUMARA 1A</string>
+				<key>Colonia</key>
+				<string>SANTA CRUZ ACATLAN</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53731301</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.48721</real>
+				<key>Longitud</key>
+				<real>-99.24626000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>SANTA ANA 14</string>
+				<key>Colonia</key>
+				<string>SAN MIGUEL TECAMACHALCO</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>52943192</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.42611</real>
+				<key>Longitud</key>
+				<real>-99.22839</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE ALCE BLANCO 53</string>
+				<key>Colonia</key>
+				<string>INDUSTRIAL ALCE BLANCO</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55761030</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.47825</real>
+				<key>Longitud</key>
+				<real>-99.22545</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>GUSTAVO BAZ 95</string>
+				<key>Colonia</key>
+				<string>SANTA MARIA NATIVITAS</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>52395861</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.48549</real>
+				<key>Longitud</key>
+				<real>-99.23005999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALZADA DE LAS ARMAS 32</string>
+				<key>Colonia</key>
+				<string>DIEZ DE ABRIL</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53633889</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.48974</real>
+				<key>Longitud</key>
+				<real>-99.21661</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>HORMONA 7</string>
+				<key>Colonia</key>
+				<string>SAN ANDRES ATOTO</string>
+				<key>Delegacion</key>
+				<string>NAUCALPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55761111</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.46844</real>
+				<key>Longitud</key>
+				<real>-99.22738</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>NEZAHUALCOYOTL</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>SIERRA NEVADA 5</string>
+				<key>Colonia</key>
+				<string>PARQUE INDUSTRIAL IZCALLI</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>51132287</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.38891</real>
+				<key>Longitud</key>
+				<real>-98.97935</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE 1 16</string>
+				<key>Colonia</key>
+				<string>LAS AGUILAS</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57320533</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.37685</real>
+				<key>Longitud</key>
+				<real>-99.00725</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>VALLE DE SANTIAGO 1</string>
+				<key>Colonia</key>
+				<string>EX-HACIENDA SANTA ANA ARAGON</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57109470</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.49407</real>
+				<key>Longitud</key>
+				<real>-99.05373</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. DE LAS MAÑANITAS 268</string>
+				<key>Colonia</key>
+				<string>BENITO JUAREZ</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57302440</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.40616</real>
+				<key>Longitud</key>
+				<real>-98.99015</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. PANTITLAN 531</string>
+				<key>Colonia</key>
+				<string>LA PERLA</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57383333</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.38785</real>
+				<key>Longitud</key>
+				<real>-99.00346999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. ADOLFO LOPEZ MATEOS 650</string>
+				<key>Colonia</key>
+				<string>EL PALMAR</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57363493</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.41381</real>
+				<key>Longitud</key>
+				<real>-99.02096</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE 34</string>
+				<key>Colonia</key>
+				<string>JARDINES DE GUADALUPE</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57128143</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.47661</real>
+				<key>Longitud</key>
+				<real>-99.05439</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. 7 111</string>
+				<key>Colonia</key>
+				<string>EL PORVENIR</string>
+				<key>Delegacion</key>
+				<string>NEZAHUALCOYOTL</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>22357967</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.41443</real>
+				<key>Longitud</key>
+				<real>-99.05669</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SAN MATEO ATENCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SOLIDARIDAD-LAS TORRES 698</string>
+				<key>Colonia</key>
+				<string>ALVARO OBREGON</string>
+				<key>Delegacion</key>
+				<string>SAN MATEO ATENCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2716963</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.28082</real>
+				<key>Longitud</key>
+				<real>-99.5558</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SAN VICENTE CHICOLOAPAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA MEXICO-TEXCOCO MZ 4 LT 15</string>
+				<key>Colonia</key>
+				<string>SAN JOSE VICENTE CHICOLOAPAN</string>
+				<key>Delegacion</key>
+				<string>SAN VICENTE CHICOLOAPAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58527081</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.41659</real>
+				<key>Longitud</key>
+				<real>-98.91755999999999</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SANTIAGO TIANGUISTENCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>FRANCISCO JAVIER MINA 507</string>
+				<key>Colonia</key>
+				<string>CENTRO SANTIAGO TIANGUISTENGO</string>
+				<key>Delegacion</key>
+				<string>SANTIAGO TIANGUISTENCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(713)1338248</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.18073</real>
+				<key>Longitud</key>
+				<real>-99.47181</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TECAMAC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>CANAL DEL NORTE 2</string>
+				<key>Colonia</key>
+				<string>AMPLIACION OZUMBILLA</string>
+				<key>Delegacion</key>
+				<string>TECAMAC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>59341414</string>
+				<key>Telefono2</key>
+				<string>59341415</string>
+				<key>Latitud</key>
+				<real>19.67171</real>
+				<key>Longitud</key>
+				<real>-99.00319</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CARR. MEXICO-PACHUCA KM 39, S/N</string>
+				<key>Colonia</key>
+				<string>TECAMAC</string>
+				<key>Delegacion</key>
+				<string>TECAMAC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>59346431</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.71604</real>
+				<key>Longitud</key>
+				<real>-98.97298000000001</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TEOLOYUCAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. 5 DE MAYO S/N</string>
+				<key>Colonia</key>
+				<string>TEPANQUIAHUAC CENTRO</string>
+				<key>Delegacion</key>
+				<string>TEOLOYUCAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(593)9141127</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.73642</real>
+				<key>Longitud</key>
+				<real>-99.1829</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TEPOTZOTLAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. LIBRAMIENTO SUR 4</string>
+				<key>Colonia</key>
+				<string>BARRIO TEXCACOA</string>
+				<key>Delegacion</key>
+				<string>TEPOTZOTLAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58761470</string>
+				<key>Telefono2</key>
+				<string>58765386</string>
+				<key>Latitud</key>
+				<real>19.70689</real>
+				<key>Longitud</key>
+				<real>-99.21011</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TEXCOCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. JUAREZ NORTE 414</string>
+				<key>Colonia</key>
+				<string>SAN MATEO</string>
+				<key>Delegacion</key>
+				<string>TEXCOCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>015959553733</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.520919</real>
+				<key>Longitud</key>
+				<real>-98.882006</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TEXCOCO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>ANDADOR PALMAS S/N</string>
+				<key>Colonia</key>
+				<string>LA TRINIDAD</string>
+				<key>Delegacion</key>
+				<string>TEXCOCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>015959549389</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.50544</real>
+				<key>Longitud</key>
+				<real>-98.87927999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA LOS REYES-LECHERIA KM. 23.5</string>
+				<key>Colonia</key>
+				<string>LAS JOYAS DE SANTA ANA</string>
+				<key>Delegacion</key>
+				<string>TEXCOCO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>015959549775</string>
+				<key>Telefono2</key>
+				<string>015959546820</string>
+				<key>Latitud</key>
+				<real>19.52183</real>
+				<key>Longitud</key>
+				<real>-98.89537</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TLALNEPANTLA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. INDUSTRIA ESQ. 16 DE SEPTIEMBRE, S/N</string>
+				<key>Colonia</key>
+				<string>LOS REYES IZTACALA</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55650872</string>
+				<key>Telefono2</key>
+				<string>55653402</string>
+				<key>Latitud</key>
+				<real>19.52534</real>
+				<key>Longitud</key>
+				<real>-99.1996</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SOR JUANA INES DE LA CRUZ 7A</string>
+				<key>Colonia</key>
+				<string>CENTRO DE TLALNEPANTLA DE BAZ</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53908281</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.53866</real>
+				<key>Longitud</key>
+				<real>-99.19834</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CALLE EMILIANO ZAPATA 14</string>
+				<key>Colonia</key>
+				<string>SAN JUAN IXHUATEPEC</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>57150708</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.51868</real>
+				<key>Longitud</key>
+				<real>-99.09975</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>20 DE NOVIEMBRE 6</string>
+				<key>Colonia</key>
+				<string>SAN LUCAS TEPETLACALCO</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53970330</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.51966</real>
+				<key>Longitud</key>
+				<real>-99.23114</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AMANALCO 158</string>
+				<key>Colonia</key>
+				<string>LA ROMANA</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55651132</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.55349</real>
+				<key>Longitud</key>
+				<real>-99.19298999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>MARIANO ESCOBEDO 300</string>
+				<key>Colonia</key>
+				<string>INDUSTRIAL SAN LORENZO</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>55650700</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.54235</real>
+				<key>Longitud</key>
+				<real>-99.20793999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SANTA CECILIA 294-A</string>
+				<key>Colonia</key>
+				<string>SANTA CECILIA</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53097666</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.54985</real>
+				<key>Longitud</key>
+				<real>-99.17359</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. GUSTAVO BAZ 31</string>
+				<key>Colonia</key>
+				<string>XOCOYAHUALCO</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53930241</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.51003</real>
+				<key>Longitud</key>
+				<real>-99.21914</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. ADOLFO LOPEZ MATEOS 2</string>
+				<key>Colonia</key>
+				<string>JACARANDAS</string>
+				<key>Delegacion</key>
+				<string>TLALNEPANTLA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>53981653</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.53848</real>
+				<key>Longitud</key>
+				<real>-99.22908</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TOLUCA</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. INDEPENDENCIA OTE. 1605</string>
+				<key>Colonia</key>
+				<string>ZONA INDUSTRIAL</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2260150</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.292665</real>
+				<key>Longitud</key>
+				<real>-99.62643300000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. ALFREDO DEL MAZO 80</string>
+				<key>Colonia</key>
+				<string>SAN LORENZO TEPALTITLAN</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2143083</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.29983</real>
+				<key>Longitud</key>
+				<real>-99.62748000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. IGNACIO COMONFORT 114-A</string>
+				<key>Colonia</key>
+				<string>SANTA ANA TLAPALTITLAN</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2160935</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.28264</real>
+				<key>Longitud</key>
+				<real>-99.60917999999999</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>BLVD. ADOLFO LOPEZ MATEOS 103</string>
+				<key>Colonia</key>
+				<string>LOS ANGELES</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)1671255</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.30147</real>
+				<key>Longitud</key>
+				<real>-99.64458</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. SEBASTIAN LERDO DE TEJADA PONIENTE 900</string>
+				<key>Colonia</key>
+				<string>ELECTRICISTAS LOCALES</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2150583</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.28992</real>
+				<key>Longitud</key>
+				<real>-99.67255</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>VIA JOSE LOPEZ PORTILLO 916</string>
+				<key>Colonia</key>
+				<string>SAN MATEO OTZCATIPAN</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2740819</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.31437</real>
+				<key>Longitud</key>
+				<real>-99.63422</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>LAGO IZAMAL S/N</string>
+				<key>Colonia</key>
+				<string>SEMINARIO</string>
+				<key>Delegacion</key>
+				<string>TOLUCA</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>01(722)2701082</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.27449</real>
+				<key>Longitud</key>
+				<real>-99.67748</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TULTEPEC</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>JOAQUIN MONTENEGRO ESQ. 2 DE MARZO</string>
+				<key>Colonia</key>
+				<string>BARRIO SAN MARTIN TULTEPEC</string>
+				<key>Delegacion</key>
+				<string>TULTEPEC</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58928383</string>
+				<key>Telefono2</key>
+				<string>58928384</string>
+				<key>Latitud</key>
+				<real>19.67305</real>
+				<key>Longitud</key>
+				<real>-99.12869999999999</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>TULTITLAN</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>EJE 8 LT. 210</string>
+				<key>Colonia</key>
+				<string>SAN PABLO DE LAS SALINAS</string>
+				<key>Delegacion</key>
+				<string>TULTITLAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58795379</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.66011</real>
+				<key>Longitud</key>
+				<real>-99.08325000000001</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>AV. CARTAGENA 4</string>
+				<key>Colonia</key>
+				<string>SAN MATEO CUAUTEPEC</string>
+				<key>Delegacion</key>
+				<string>TULTITLAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58902277</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.62531</real>
+				<key>Longitud</key>
+				<real>-99.15183</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>BLVD. REFORMA 4</string>
+				<key>Colonia</key>
+				<string>SAN FRANCISCO CHILPAN</string>
+				<key>Delegacion</key>
+				<string>TULTITLAN</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>58940604</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.60967</real>
+				<key>Longitud</key>
+				<real>-99.18116000000001</real>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>ZUMPANGO</string>
+		<key>centros</key>
+		<array>
+			<dict>
+				<key>Calle</key>
+				<string>AV. MELCHOR OCAMPO 80A</string>
+				<key>Colonia</key>
+				<string>BARRIO DE SANTIAGO 1ERA SECCION</string>
+				<key>Delegacion</key>
+				<string>ZUMPANGO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>(01591)9170220</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.8119</real>
+				<key>Longitud</key>
+				<real>-99.10827</real>
+			</dict>
+			<dict>
+				<key>Calle</key>
+				<string>CARRETERA ZUMPANGO-LOS REYES S/N KM. 11.5</string>
+				<key>Colonia</key>
+				<string>BARRIO SAN LORENZO</string>
+				<key>Delegacion</key>
+				<string>ZUMPANGO</string>
+				<key>Ciudad</key>
+				<string>ESTADO DE MEXICO</string>
+				<key>Telefono1</key>
+				<string>(0159)11001000</string>
+				<key>Telefono2</key>
+				<string></string>
+				<key>Latitud</key>
+				<real>19.78658</real>
+				<key>Longitud</key>
+				<real>-99.04895999999999</real>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,119 @@
+{% extends "drivemee/base.html" %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'django_modalview/js/django_modal_view.js' %}"></script>
+    <script type="text/javascript" src="{% static 'drivemee/js/mymodal.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'django_modalview/css/modal.css' %}" type="text/css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwPmUe198mzBkDZgd9GGbnvQIDN567R3U"></script>
+    <script src="{% static 'django_modalview/js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap-datetimepicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/locales/bootstrap-datetimepicker.es.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/datetimepicker.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+                <div id="map0" class="map"></div>
+            </div>
+    </section>
+
+{% endblock %}
+
+{% block bootstrap3_extra_script %}
+<script>
+    $(document).ready(function(){
+        initMap()
+    });    
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map0'), {
+    zoom: 3,
+    center: {lat: 0, lng: -180},
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  });
+
+  var flightPlanCoordinates = [
+{lat:25.733128, lng: -100.320083},
+{lat:25.732741, lng: -100.320069},
+{lat:25.732848, lng: -100.319678},
+{lat:25.732863, lng: -100.319906},
+{lat:25.732913, lng: -100.319729},
+{lat:25.733003, lng: -100.319783},
+{lat:25.732961, lng: -100.319617},
+{lat:25.73316, lng: -100.319969},
+{lat:25.733663, lng: -100.31944},
+{lat:25.733171, lng: -100.319935},
+{lat:25.733103, lng: -100.31976},
+{lat:25.73315, lng: -100.319885},
+{lat:25.7332, lng: -100.319948},
+{lat:25.73315, lng: -100.319853},
+{lat:25.733103, lng: -100.31976},
+{lat:25.733062, lng: -100.319868},
+{lat:25.733041, lng: -100.31983},
+{lat:25.73316, lng: -100.319878},
+{lat:25.733096, lng: -100.319874},
+{lat:25.733145, lng: -100.319848},
+{lat:25.732998, lng: -100.319843},
+{lat:25.738948, lng: -100.304444},
+{lat:25.743526, lng: -100.302201},
+{lat:25.743535, lng: -100.302348},
+{lat:25.743705, lng: -100.302099},
+{lat:25.743491, lng: -100.302285},
+{lat:25.73657, lng: -100.318428},
+{lat:25.743509, lng: -100.302339},
+{lat:25.733463, lng: -100.317809},
+{lat:25.733132, lng: -100.319724},
+{lat:25.733097, lng: -100.319896},
+{lat:25.73308, lng: -100.3199},
+{lat:25.733137, lng: -100.319866},
+{lat:25.733086, lng: -100.319854},
+{lat:25.733125, lng: -100.319813},
+{lat:25.733118, lng: -100.319804},
+{lat:25.733121, lng: -100.319779},
+{lat:25.733134, lng: -100.319764},
+{lat:25.733122, lng: -100.319713},
+{lat:25.732996, lng: -100.319738},
+{lat:25.733051, lng: -100.319899},
+{lat:25.733183, lng: -100.319857},
+{lat:25.733109, lng: -100.319898},
+{lat:25.733171, lng: -100.319936},
+{lat:25.733077, lng: -100.319937},
+{lat:25.733058, lng: -100.319939},
+{lat:25.73309, lng: -100.319988},
+{lat:25.73313, lng: -100.319929},
+{lat:25.73315, lng: -100.319963},
+{lat:25.732944, lng: -100.319719},
+{lat:25.73317, lng: -100.319934},
+{lat:25.733043, lng: -100.320169},
+{lat:25.733137, lng: -100.319873},
+{lat:25.733099, lng: -100.319973},
+{lat:25.73316, lng: -100.319989},
+{lat:25.733229, lng: -100.319921},
+{lat:25.732827, lng: -100.319989},
+{lat:25.733171, lng: -100.319918},
+{lat:25.733102, lng: -100.319961},
+{lat:25.733172, lng: -100.320032},
+{lat:25.733051, lng: -100.319776},
+{lat:25.73359, lng: -100.316288},
+{lat:25.732463, lng: -100.319652},
+{lat:25.732603, lng: -100.319785},
+{lat:25.732319, lng: -100.319638},
+{lat:25.732714, lng: -100.319773},
+{lat:25.732694, lng: -100.31977},
+{lat:25.732748, lng: -100.319762},
+  ];
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(map);
+}
+</script>
+{% endblock %}

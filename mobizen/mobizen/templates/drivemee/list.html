@@ -1,0 +1,88 @@
+{% extends "drivemee/base.html" %}
+
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'django_modalview/js/django_modal_view.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'django_modalview/css/modal.css' %}" type="text/css" />
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{% block title %} {{ title|default:_('DriveMee') }}{% endblock %}</h1>
+            </div> <!-- col -->
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <nav class="nav-solicitudes">
+                        <ul>{% if from_search %}
+                            <li><a class="selected">Resultado de búsqueda<span class="badge">{{ latest_solicitud_list|length }}</span></a></li>
+                            {% endif %}
+                            <li><a href="{% url 'drivemee:solicitudes' source=source status='activo' %}"{% if selected_status == 'activo' %} class="selected"{% endif %}>Activas<span class="badge">{{ count_activo }}</span></a></li>
+                            <li class="padding-lista"><a href={% if source %}"{% url 'drivemee:solicitudes' source=source status='abierto' %}"{% else %}"{% url 'drivemee:solicitudes' status='abierto' %}"{% endif %}{% if selected_status == 'abierto' %} class="selected"{% endif %}>Sin Atender<span class="badge">{{ count_abierto }}</span></a></li>
+                            <li class="padding-lista"><a href="{% url 'drivemee:solicitudes' source=source status='preagendado' %}"{% if selected_status == 'preagendado' %} class="selected" {% endif %}>Pre-Agendadas<span class="badge">{{ count_preagendado }}</span></a></li>
+                            <li class="padding-lista"><a href="{% url 'drivemee:solicitudes' source=source status='agendado' %}"{% if selected_status == 'agendado' %} class="selected" {% endif %}>Agendadas<span class="badge">{{ count_agendado }}</span></a></li>
+                            <li class="padding-lista"><a href="{% url 'drivemee:solicitudes' source=source status='proceso' %}"{% if selected_status == 'proceso' %} class="selected" {% endif %}>En proceso<span class="badge">{{ count_proceso }}</span></a></li>
+                            <li><a href="{% url 'drivemee:solicitudes' source=source status='cerrado' %}"{% if selected_status == 'cerrado' %} class="selected" {% endif %}>Concluidos{% if selected_status == 'cerrado' %}<span class="badge">{{ count_cerrado }}</span>{% endif %}</a></li>
+                            <li><a href="{% url 'drivemee:solicitudes' source=source status='cancelado' %}"{% if selected_status == 'cancelado' %} class="selected" {% endif %}>Canceladas{% if selected_status == 'cancelado' %}<span class="badge">{{ count_cancelado }}</span>{% endif %}</a></li>
+                            <li><a href="{% url 'drivemee:solicitudes' source=source status='pospuesta' %}"{% if selected_status == 'pospuesta' %} class="selected" {% endif %}>Pospuestas{% if selected_status == 'pospuesta' %}<span class="badge">{{ count_pospuesta }}</span>{% endif %}</a></li>
+                        </ul>
+                    </nav>
+                </div> <!-- col -->
+                <div class="col-md-9">
+                {% if latest_solicitud_list %}
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Folio</th>
+                                <th>Nombre</th>
+                                <th>{% if selected_status == 'agendado' %}Fecha de Cita{% elif selected_status == 'preagendado' %}Fecha Preagendada{% elif selected_status == 'pospuesta' %}Fecha de Atención{% elif selected_status == 'cerrado' or selected_status == 'cancelado' %}Fecha de Cierre{% else %}Fecha{% endif %}</th>
+                                {% if selected_status != 'pospuesta' %}
+                                <th>Estado</th>{% endif %}
+                                {% if selected_status == 'agendado' %}<th>Operador</th>{% endif %}
+                                {% if selected_status == 'cerrado' %}<th>Costo</th>{% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                    {% for solicitud in latest_solicitud_list %}
+                            <tr>
+                                <td><a href="{% url 'drivemee:solicitud-detail' source=source status=status pk=solicitud.folio %}">{{ solicitud.internal_folio }}</a></td>
+                                <td>{{ solicitud.nombre|title }}</td>
+                                <td>{% if selected_status == 'agendado' %}{{ solicitud.cita.fecha|date:"l d M H:i" }}{% elif selected_status == 'proceso' %}{{ solicitud.timestamp_proceso|date:"l d M H:i" }}{% elif selected_status == 'pospuesta' or selected_status == 'preagendado' %}{{ solicitud.snooze_until_date|date:"l d M H:i" }}{% elif selected_status == 'cerrado' or selected_status == 'cancelado' %}{{ solicitud.timestamp_cerrado|date:"l d M H:i" }}{% else %}{{ solicitud.timestamp_abierto|date:"l d M H:i" }}{% endif %}</td>
+                                {% if selected_status != 'pospuesta' %}
+                                <td>{{ solicitud.status|title }}</td>{% endif %}
+                                {% if selected_status == 'agendado' %}<td>{{ solicitud.operador.nombre|title }}</td>{% endif %}
+                                {% if selected_status == 'cerrado' %}<td>{{ solicitud.costo_real }}</td>{% endif %}
+                            </tr>
+                    {% endfor %}
+                        </tbody>
+                    </table>
+                </div> <!-- col -->
+                    {% if is_paginated %}
+                <div class="row text-center">
+            		<nav>
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+            				    <li><a href="?page=1" aria-label="First">&laquo;&laquo;</a></li>
+            				    <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>{% endif %}
+                
+                            {% for i in paginator.page_range %}
+                                <li {% if page_obj.number == i %} class="active" {% endif %}><a href="?page={{i}}">{{i}}</a></li>{% endfor %}
+                            {% if page_obj.has_next %}
+                                <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                <li><a href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a></li>{% endif %}
+                        </ul>
+            		</nav>
+                </div> <!-- col -->
+
+                    {% endif %}
+                {% else %}
+                    <h3>No hay solicitudes</h3>
+                {% endif %}
+                </div> <!-- col -->
+        </div> <!-- row -->
+    </div>
+{% endblock %}

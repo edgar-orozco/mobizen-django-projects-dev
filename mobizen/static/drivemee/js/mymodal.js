@@ -1,0 +1,20 @@
+$(function(){
+    $('#datos_modal').DjangoModalRunner({
+    });
+    $('#operador_modal').DjangoModalRunner({
+    });
+    $('#cancel_modal').DjangoModalRunner({
+    });
+    $('#schedule_modal').DjangoModalRunner({
+    });
+    $('#snooze_modal').DjangoModalRunner({
+    });
+    $('#notes_modal').DjangoModalRunner({
+    });
+    $('#preagendar_modal').DjangoModalRunner({
+    });
+    $('#domicilio_modal_1').DjangoModalRunner({
+    });
+    $('#domicilio_modal_2').DjangoModalRunner({
+    });
+});

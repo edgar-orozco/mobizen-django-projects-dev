@@ -1,0 +1,10 @@
+*.sock
+.idea
+*.log
+*.pyc
+*.sqlite
+*.sqlite3
+*.sql
+*.csv
+*.json
+.well-known

@@ -1,0 +1,73 @@
+{% load staticfiles %}
+    <section id="servicio">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">          
+          <div class="item active">
+            <img class="img-1" src="{% static 'img/valet-paso-1@3x.png' %}">
+            <div class="carousel-caption">
+              <span>Solicita el servicio de Verificación para tu auto desde Verifica</span>
+            </div>
+          </div> <!-- item -->
+          <div class="item">
+            <img class="img-2" src="{% static 'img/valet-paso-2@3x.png' %}">
+            <div class="carousel-caption">
+              <span>Recibirás una llamada telefónica para confirmar tus datos y agendar una visita</span>
+            </div>
+          </div> <!-- item -->
+          <div class="item">
+            <img class="img-3" src="{% static 'img/valet-paso-3@3x.png' %}">
+            <div class="carousel-caption">
+              <span>Un operador se presentará en el domicilio acordado para llevar tu auto a verificar</span>
+            </div>
+          </div> <!-- item -->
+          <div class="item">
+            <img class="img-4" src="{% static 'img/valet-paso-4@3x.png' %}">
+            <div class="carousel-caption">
+              <span>El mismo día recibirás tu auto verificado y se te entregarán tus documentos</span>
+            </div>
+          </div> <!-- item -->
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    {% if form %}
+    <h2 class="divisor">Solicita tu servicio <span class="glyphicon glyphicon-chevron-down"></span></h2>
+    {% endif %}
+    <section id="tarifas" class="columna-central">
+          <h2>Tarifas del servicio</h2>
+          <table >
+            <tr>
+              <th class="center">Semana</th>
+              <th class="center blue">D.F.</th>
+              <th class="center blue">Edo. de Mex.</th>
+            </tr>
+            <tr>
+              <td class="center">1ra a 3ra</td>
+              <td class="center">${{ tarifas.0.costo }}</td>
+              <td class="center">${{ tarifas.2.costo }}</td>
+            </tr>
+            <tr>
+              <td class="center">Última</td>
+              <td class="center">${{ tarifas.1.costo }}</td>
+              <td class="center">${{ tarifas.3.costo }}</td>
+            </tr>
+          </table>
+          <p class="notas-costos">IVA incluído. Costos de Verificación adicional.</p>
+    </section>

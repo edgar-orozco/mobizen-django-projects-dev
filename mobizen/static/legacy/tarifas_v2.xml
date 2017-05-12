@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key>
+	<dict>
+		<key>header</key>
+		<string>Distrito Federal</string>
+		<key>footer</key>
+		<string>-vacio-</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Holograma Exento</string>
+				<key>subtitle</key>
+				<string>Sin Costo</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Holograma 00, 0, 1 y 2</string>
+				<key>subtitle</key>
+				<string>$414</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Multa Extemporánea</string>
+				<key>subtitle</key>
+				<string>$1,402</string>
+			</dict>
+		</array>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>header</key>
+		<string>Estado de México</string>
+		<key>footer</key>
+		<string>Tarifas vigentes 2015</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Holograma Exento</string>
+				<key>subtitle</key>
+				<string>Sin Costo</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Holograma 00</string>
+				<key>subtitle</key>
+				<string>$701</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Holograma 0</string>
+				<key>subtitle</key>
+				<string>$350</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Holograma 1 y 2</string>
+				<key>subtitle</key>
+				<string>$280</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Multa Extemporánea</string>
+				<key>subtitle</key>
+				<string>$1,402</string>
+			</dict>
+		</array>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>header</key>
+		<string>-vacio-</string>
+		<key>footer</key>
+		<string>-vacio-</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Más Información</string>
+				<key>target</key>
+				<string>tarifas.html</string>
+			</dict>
+		</array>
+	</dict>
+	<key>salarioMinimo</key>
+	<string>70.10</string>
+</dict>
+</plist>

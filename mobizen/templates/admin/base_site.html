@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+
+{% block extrahead %}
+    {% load selectable_tags %}
+    {% include_ui_theme 'smoothness' %}
+    {% include_jquery_libs  %}
+{% endblock %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Verifica admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Verifica admin') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+    {% block extra-js %}{% endblock %}

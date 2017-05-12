@@ -1,0 +1,10 @@
+{% extends 'drivemee/verifica-base.html' %}
+
+{% block content %}
+    {% include "drivemee/drivemee-solicitud-info.html" %}
+
+    {% if form %}
+    {% include "drivemee/drivemee-solicitud-form.html" %}
+    {% endif %}
+
+{% endblock %}

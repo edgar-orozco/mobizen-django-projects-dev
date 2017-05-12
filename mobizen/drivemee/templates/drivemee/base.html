@@ -1,0 +1,65 @@
+{% extends 'drivemee/bootstrap.html' %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block bootstrap3_content %}
+<div id="contenedor">
+    <section class="navigation">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand"><a href="{% url 'drivemee:index' %}"><img src="{% static 'img/drivemee-logo3x.png' %}" width="150" alt=""></a></span>
+                    </div> <!-- navbar-header -->			
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'drivemee:operadores' %}"{% if source == 'operadores' %} class="selected"{% endif %}>Operadores</a></li>
+                            <li><a href="{% url 'drivemee:solicitudes' source='agencia' status='activo' %}"{% if source == 'agencia' %} class="selected"{% endif %}>Solicitudes Agencia</a></li>
+                            <li><a href="{% url 'drivemee:solicitudes' source='app' status='activo' %}"{% if source == 'app' %} class="selected"{% endif %}>Solicitudes App</a></li>
+                            <li><a href="{% url 'drivemee:logout' %}">Logout</a></li>
+        				{% else %}
+                            <li><a href="{% url 'drivemee:crear-solicitud' %}">Solicitar Servicio</a></li>
+        				{% endif %}
+                        </ul>
+                        {% if user.is_authenticated %}
+                   
+                        <form class="navbar-form" role="search" action="{% url 'drivemee:solicitud-search' %}">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Buscar (placa o folio)" name="term" id="term">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    
+                    {% endif %}
+                    </div> <!-- navbar-collapse -->
+                    
+                </nav> <!-- navbar -->
+            </div> <!-- row -->
+        </div>
+    </section>
+    {% bootstrap_messages %}
+    <section id="main">
+        
+        {% block content %}(no content){% endblock %}
+        
+    </section>
+    
+    <footer>
+        <div class="container text-center">
+            <img src="{% static 'img/drivemee-d@2x.png' %}" width="60" alt=""><br>
+            2016 © Todos los derechos reservados. DriveMee.
+        </div><!-- container -->
+    </footer>
+</div>
+{% endblock %}

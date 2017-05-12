@@ -1,0 +1,99 @@
+{% extends "drivemee/base.html" %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'django_modalview/js/django_modal_view.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'django_modalview/css/modal.css' %}" type="text/css" />
+    <script type="text/javascript" src="{% static 'drivemee/js/mymodal.js' %}"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-left">
+                    <h1>Operador: <span class="folio">{{ operador.nombre }}</span></h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Datos Personales</h2>
+                        </div> <!-- col -->
+                        <div class="col-md-6 text-right">
+                            <button class="btn btn-agendar" id="operador_modal" href="{% url 'drivemee:operador-edit' operador.pk %}">Editar</button>
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Nombre:</span>{{ operador.nombre }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">E-mail:</span>{{ operador.email }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Teléfono:</span>{{ operador.telefono }}</li>
+                            </ul> <!-- datos personales -->
+                        </div> <!-- col -->
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Calificación:</span>{{ calificacion_operador.evaluacion__calificacion__avg }}</li>
+                            </ul> <!-- datos -->
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+                    {% if active_solicitudes_list %}
+                    <h2>Solicitudes Activas</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-group">
+                                {% for solicitud in active_solicitudes_list %}
+                                <li class="list-group-item dato"><span class="etiqueta">Solicitud:</span><span class="etiqueta"><a href="{% url 'drivemee:solicitud-detail' source='app' status='activo' pk=solicitud.pk %}">{{ solicitud.id }}</a></span><span class="etiqueta">Cita:</span>{{ solicitud.cita.fecha }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+                    {% endif %}
+                    {% if recent_evaluaciones_list %}
+                    <h2>Evaluaciones recientes</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-group">
+                                {% for evaluacion in recent_evaluaciones_list %}
+                                <li class="list-group-item dato"><span class="etiqueta">Solicitud:</span><a href="{% url 'drivemee:solicitud-detail' source='app' status='activo' pk=evaluacion.solicitud.pk %}">{{ evaluacion.solicitud.id }}</a></li>
+                                <li class="list-group-item dato"><span class="etiqueta">Fecha:</span>{{ evaluacion.timestamp }}</li>
+        {% if evaluacion.no_quiso_calificar %}
+                                <li class="list-group-item dato"><span class="etiqueta">No Quiso Calificar:</span><span class="glyphicon glyphicon-remove glyphicon-red"></li>
+        {% else %}
+                                <li class="list-group-item dato"><span class="etiqueta">Calificación:</span>{{ evaluacion.calificacion }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Comentarios:</span>{{ evaluacion.comentarios }}</li>
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+                    {% endif %}
+                    {% if recent_solicitudes_list %}
+                    <h2>Solicitudes Recientes</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-group">
+                                {% for solicitud in recent_solicitudes_list %}
+                                <li class="list-group-item dato"><span class="etiqueta">Solicitud:</span><span class="etiqueta"><a href="{% url 'drivemee:solicitud-detail' source='app' status='activo' pk=solicitud.pk %}">{{ solicitud.id }}</a></span><span class="etiqueta">Cita:</span>{{ solicitud.cita.fecha }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div> <!-- col -->
+                    </div> <!-- row -->
+                    {% endif %}
+                </div>    <!-- col -->            
+            </div> <!-- row -->
+        </div> <!-- container -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+				</div>
+				<div class="col-sm-6 text-right">
+					<a class="btn btn-default" href="{% url 'drivemee:operadores' %}" role="button">Regresar</a>
+				</div>
+			</div>
+		</div>
+    </section>
+{% endblock %}

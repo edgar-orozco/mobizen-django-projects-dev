@@ -1,0 +1,153 @@
+    <section class="columna-central">
+      <h1 class="oculto">Verificación a domicilio</h1>
+      
+      <form class="solicitud" action="{{ solicitud_form_target }}" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+        <fieldset>
+          <h2>Datos Personales</h2>
+          <div class="form-field">
+            {{ form.nombre.label_tag }}
+            {{ form.nombre }}
+            {% if form.nombre.errors %}
+            <ul class="form-errors">{% for error in form.nombre.errors %}
+                <li class="form-errors">{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {% if form.email.errors %}
+            <ul class="form-errors">{% for error in form.email.errors %}
+                <li class="form-errors">{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field">
+            {{ form.telefono.label_tag }}
+            {{ form.telefono }}
+            {% if form.telefono.errors %}
+            <ul class="form-errors">{% for error in form.telefono.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+        </fieldset>
+        <fieldset>
+          <h2>Vehículo</h2>
+          <div class="form-field form-middle-field">
+            {{ form.placa.label_tag }}
+            {{ form.placa }}
+            {% if form.placa.errors %}
+            <ul class="form-errors">{% for error in form.placa.errors %}
+                <li class="form-errors">{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field form-middle-field text-center">
+            {{ form.modelo.label_tag }}
+            {{ form.modelo }}
+            {% if form.modelo.errors %}
+            <ul class="form-errors">{% for error in form.modelo.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field form-middle-field">
+            {{ form.marca.label_tag }}
+            {{ form.marca }}
+            {% if form.marca.errors %}
+            <ul class="form-errors">{% for error in form.marca.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field form-middle-field text-center">
+            {{ form.submarca.label_tag }}
+            {{ form.submarca }}
+            {% if form.submarca.errors %}
+            <ul class="form-errors">{% for error in form.submarca.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+          <div class="form-field">
+            <input type="hidden" name="holograma" id="holograma" value="{{ form.holograma.value }}">
+            {{ form.holograma.label_tag }}
+            <div class="hologramas">
+              <div class={% if form.holograma.value == "DOBLE CERO" %}"holograma selected"{% else %}"holograma"{% endif %} data-value="DOBLE CERO">00</div>
+              <div class={% if form.holograma.value == "CERO" %}"holograma selected"{% else %}"holograma"{% endif %} data-value="CERO">0</div>
+              <div class={% if form.holograma.value == "UNO" %}"holograma selected"{% else %}"holograma"{% endif %} data-value="UNO">1</div>
+              <div class={% if form.holograma.value == "DOS" %}"holograma selected"{% else %}"holograma"{% endif %} data-value="DOS">2</div>
+            </div>
+            {% if form.holograma.errors %}
+            <ul class="form-errors">{% for error in form.holograma.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h2>Cupón de descuento <span>(Opcional)</span></h2>
+          <div class="form-field cupones">
+            {{ form.cupon.label_tag }}
+            {{ form.cupon }}
+            {% if form.cupon.errors %}
+            <ul class="form-errors">{% for error in form.cupon.errors %}
+                <li class="form-errors">{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div> 
+        </fieldset>
+
+        <div class="form-field">
+          <p class="aceptar">
+            <input type="checkbox" name="terms" id="id_terms" value="0">Acepto <a href="http://verifica.mx/terminos-servicio-domicilio/" target="_blank">términos y condiciones</a></p>
+            {% if form.terms.errors %}
+            <ul class="form-errors">{% for error in form.terms.errors %}
+                <li>{{ error|escape }}</li>{% endfor %}
+            </ul>{% endif %}
+        </div>
+        <input type="submit" class="btn-solicitar" value="Solicitar">
+      </form>
+
+      <p class="nota">
+        El servicio se encuentra disponible sólo para D.F. y Estado de México<br />
+        <span class="aviso"><a href="http://verifica.mx/privacidad"  target="_blank">Aviso de Privacidad</a></span>
+      </p>
+    </section>
+
+{% block bootstrap3_extra_script %}
+     <script>
+    $(document).ready(function(){
+      var cupon = "";
+     $('.holograma').click(function (event) {
+        var valor = $(this).data('value');
+        $('#holograma').val(valor);
+
+        $('.holograma').removeClass('selected');
+        $(this).addClass('selected');
+      }) // .holograma
+
+      $('#id_cupon').change(function () {
+
+        
+        cupon =  $('#id_cupon').val();
+        console.log(cupon);
+
+        if (cupon != "") {
+          console.log("hay cupon");
+          $.ajax({
+            method: "GET",
+            url: "{{ cupones_api_url }}"+cupon,
+            })
+            .success( function( msg ) {
+              $('.cupones ul').remove();
+              $('.cupones').append('<ul class="form-errors success"><li class="form-errors">Cupón válido</li></ul>');
+            })
+            .error( function() {
+              $('.cupones ul').remove();
+              $('.cupones').append('<ul class="form-errors"><li class="form-errors">Cupón inválido</li></ul>');
+            }); //ajax
+        } else {
+          console.log("esta vacio");
+          $('.cupones ul').remove();
+        } // end if else
+         
+      }); // change
+    }); // ready
+    </script>
+{% endblock %}

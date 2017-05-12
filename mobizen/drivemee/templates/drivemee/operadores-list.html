@@ -1,0 +1,55 @@
+{% extends "drivemee/base.html" %}
+
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'django_modalview/js/django_modal_view.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'django_modalview/css/modal.css' %}" type="text/css" />
+    <script type="text/javascript" src="{% static 'drivemee/js/mymodal.js' %}"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>{% block title %} {{ title|default:_('DriveMee') }}{% endblock %}</h1>
+    </div> <!-- col -->
+    <div class="col-md-12">
+        <div class="col-md-3">
+            {% if perms.drivemee.add_operador %}
+            <button class="btn btn-agendar" id="operador_modal" href="{% url 'drivemee:operador-create' %}">Nuevo Operador</button>
+            {% endif %}
+        </div> <!-- col -->
+        <div class="col-md-9">
+        {% if operadores_list %}
+            <div class="list-group">
+        {% for operador in operadores_list %}
+                <a class="list-group-item" href="{% url 'drivemee:operador-detail' operador.pk %}"><span class="badge glyphicon glyphicon-ok" aria-hidden="true"> </span>{{ operador.nombre }}</a>
+        {% endfor %}
+            </div> <!-- list-group -->
+        </div> <!-- col -->
+        {% if is_paginated %}
+        <div class="row text-center">
+    		<nav>
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+    				    <li><a href="?page=1" aria-label="First">&laquo;&laquo;</a></li>
+    				    <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>{% endif %}
+        
+                    {% for i in paginator.page_range %}
+                        <li {% if page_obj.number == i %} class="active" {% endif %}><a href="?page={{i}}">{{i}}</a></li>{% endfor %}
+                    {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        <li><a href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a></li>{% endif %}
+                </ul>
+    		</nav>
+        </div> <!-- col -->
+        {% endif %}
+    {% else %}
+            <h3>No hay Operadores</h3>
+    {% endif %}
+        
+    </div> <!-- col -->
+</div><!-- row -->
+{% endblock %}

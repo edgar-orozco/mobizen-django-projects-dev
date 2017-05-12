@@ -1,0 +1,5 @@
+imecas:39
+particula:PM10
+hora:12
+fecha:Mi&eacute;rcoles 30 de julio de 2014
+minuto:0

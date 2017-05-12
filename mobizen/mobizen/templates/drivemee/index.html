@@ -1,0 +1,12 @@
+{% extends "drivemee/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+	<div class="container-fluid">
+    {% include "drivemee/drivemee-solicitud-info.html" %}
+  </div>
+    <section class="columna-central">
+        <a href="{% url 'drivemee:verifica-crear-solicitud' %}"><button type="button" class="btn-solicitar">Solicitar Servicio a través de Verifica</button></a>
+    </section>
+{% endblock %}

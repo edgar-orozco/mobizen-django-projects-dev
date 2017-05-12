@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style type="text/css">
+        .panel {
+            border: 1px solid #ccc;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="span12" id="autocotiza">
+    <div id="mask-register" style="overflow: hidden; height: 700px; width: 910px;">
+        <div class="scroller">
+             <div id="emisionPaso1" class="panel">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <h2>Cotiza el Seguro de tu auto</h2>
+                    </div> <!-- span8 -->
+                    
+                    <div class="span4">
+                        <div id="aseguradoras">
+                            <div class="logo aba"></div>
+                            <div class="logo qualitas"></div>
+                            <div class="logo atlas"></div>
+                        </div> <!-- aseguradoras -->
+                    </div> <!-- span4 -->
+                </div> <!-- row fluid -->
+                                                
+                <div id="infoAuto" class="blockeable" style="position: relative;">
+                    <form id="cotiza" action="/autos/comparador" method="post" novalidate="novalidate">
+                        <input type="hidden" name="plx" id="plx" value="1">
+                        <input type="hidden" name="fpa" id="fpa" value="0">
+                        <input type="hidden" name="ida" id="ida" value="16541">
+                        <input type="hidden" name="mdl" id="mdl" value="2006">
+                        <input type="hidden" name="ids" id="ids" value="0">
+                        <input type="hidden" name="ipa" id="ipa" value="">
+                        <input type="hidden" name="cli" id="cli" value="57">
+                        <input type="hidden" name="cliente" id="cliente" value="interesse">
+                            
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <label for="vehiculo_txt">Vehículo:</label>
+                                <input type="text" class="input-xxlarge typeahead" value="" name="descripcion" placeholder="Escribe la descripcion del vehículo. Ej: ibiza 2004 blitz" autocomplete="off" style="margin-bottom: 0;">
+                                <img src="/img/ajax-loader.gif" class="cotizaLoaderCar hide" style="margin-left: 5px;">
+                            </div> <!-- span12 -->
+                    </div> <!-- row -->
+                    
+                    <div class="row-fluid" id="liCP">
+                        <div class="span3">
+                            <label>Código Postal:</label>
+                            <input maxlength="5" type="text" name="cp" id="cpText" value="" class="input-mini">
+                        </div>
+                        
+                        <div class="span5">
+                            <label>Correo Electrónico:</label>
+                            <input maxlength="50" type="email" name="Uemail" id="mail_txt" class="input-medium" style="margin-bottom: 5px;">
+                            <img src="/img/ajax-loader.gif" class="cotizaLoaderMail hide" width="25">
+                        </div>
+
+                        <span class="hide">El correo electrónico será usado para enviarte notificaciones acerca de tú póliza.</span>
+                        <label>Teléfono con LADA:</label>
+                        <input maxlength="50" type="text" name="Utelefono" id="phone_txt" class="input-medium" value="">
+                    </div> <!-- row fluid -->
+                </div> <!-- info auto -->
+                
+                <div class="row-fluid" id="liname">
+                    <div class="span4">
+                        <label>Nombre(s):</label>
+                        <input maxlength="50" type="text" name="Uname" id="name_txt" value="" class="input-medium">
+                    </div>
+
+                    <div class="span4">
+                        <label>Apellido Paterno:</label>
+                        <input maxlength="50" type="text" name="Upaterno" id="paterno_txt" value="" class="input-medium">
+                    </div>
+
+                    <div class="span4">
+                        <label>Apellido Materno:</label>
+                        <input maxlength="50" type="text" name="Umaterno" id="materno_txt" value="" class="input-medium">
+                    </div>
+                </div>
+                
+                <div class="row-fluid especialfields hide">
+                    <div class="span6"></div>
+                    <div class="span6"></div>
+                </div>
+                                                                
+                <div class="row-fluid livigencia">
+                    <div class="span6 ">
+                        <label for="vigencia">Inicio de Vigencia:</label>
+                        <input id="vigencia" name="vigencia" readonly="readonly" type="text" value="2014-12-01" class="input-medium vigencia_date hasDatepicker" maxlength="10">
+                                                                        
+                        <div class="text-gray" style="padding: 0;">Únicamente se permite modificar hasta 15 días posteriores.</div>
+                    </div>
+                </div>
+                
+                <div class="row-fluid">
+                    <div class="span12 text-center">
+                        <button id="cotizBtn" class="btn btn-success btn-large" type="button">COTIZAR</button>
+                    </div>
+                </div>
+            </div> <!-- Paso 1 -->
+
+            <div id="resumenAuto">
+                <h4<RESUMEN:</h4>
+                <dl>
+                    <dt>Marca y año:</dt><dd id="resMarca" class="resMarca">MAZDA 2006</dd>
+                    <dt>Modelo:</dt><dd id="resModelo" class="resModelo">3</dd>
+                    <dt>Versión:</dt><dd id="resVersion" class="resVersion">S 4P BA STD., 05 OCUP.</dd>
+                    <dt>Correo Electrónico:</dt><dd id="resEmail" class="resEmail">--- --- --- ---</dd>
+                    <dt>C.P.:</dt><dd id="resCP" class="resCP">06600</dd>
+                </dl>
+            </div>
+            </form>si
+        </div>
+        
+        <div class="avisoTxt">
+            Todos los datos que proporciones en este portal, están protegidos de acuerdo a lo establecido en nuestro <a target="_blank" href="http://www.interesse.com.mx/privacidad.pdf">aviso de privacidad</a>.<br>Si deseas evaluar nuestro servicio da clic <a href="#" data-target="#evalua" data-toggle="modal">aquí</a>.
+        </div>
+    </div>
+                                            
+    <div id="cotizaPanel" class="panel">
+        <h2>COMPARA  PRECIOS Y COBERTURAS</h2>
+
+        <div class="head">
+            <div class="infoCar">
+                <div class="imgCar"></div>
+                <div class="textCar"><span class="automodelo">MAZDA , 2006</span><span class="tipoversion">3 S 4P BA STD., 05 OCUP.</span></div>
+            </div>
+                                                    
+            <div id="coberturas">
+                <select id="sel_cobertura" name="sel_cobertura" class="input-medium">
+                    <option selected="selected" value="1">Amplia</option>
+                    <option value="2">Amplia Plus</option>
+                    <option value="3">Limitada</option>
+                    <option value="4">R.C.</option>
+                    <option value="5">RC Obligatorio</option>
+                </select>                                                        
+                
+                <label for="sel_forma_pago" class="inline">Forma de Pago:
+                <select id="tipoPago" name="tipoPago" class="input-medium">
+                    <option selected="selected" value="0">Contado</option>
+                    <option value="6">Semestral</option>
+                    <option value="3">Trimestral</option>
+                    <option value="12">Mensual</option>
+                </select></label>
+            </div>
+        </div>
+        
+        <div id="encabezados">
+            <span id="headAseguradora">CP: 06600</span>
+            <span id="headDanos"><a class="helpTip" href="/autos/descripcioncobertura/cobertura/1" title="">DAÑOS MATERIALES</a></span>
+            <span id="headRobo"><a class="helpTip" href="/autos/descripcioncobertura/cobertura/2" title="">ROBO TOTAL</a></span>
+            <span id="headTerceros"><a class="helpTip" href="/autos/descripcioncobertura/cobertura/3" title="">DAÑOS A TERCEROS</a></span>
+            <span id="headMedicos"><a class="helpTip" href="/autos/descripcioncobertura/cobertura/4" title="">GASTOS MÉDICOS</a></span>
+            <span id="headAsistencia"><a class="helpTip" href="/autos/descripcioncobertura/cobertura/7" title="">ASISTENCIA</a></span>
+            <span id="headPagos" class=""></span>
+        </div>
+        
+        <div class="cot blockeable" style="position: relative;"><div class="qualitasRow cotizacion" id="6796.05">
+            <div class="ampliaDiv cotizaDiv">
+                <div class="aseguradora">
+                    <div class="logo qualitas"></div>
+                    <div class="stars">
+                        <div class="star gold"></div>
+                        <div class="star gold"></div>
+                        <div class="star gold"></div>
+                        <div class="star gold"></div>
+                        <div class="star gold"></div>
+                    </div>
+                </div>
+            <input type="hidden" name="totalQualitas" id="totalQualitas" value="$ 6,796">
+            <div class="cobx cotiza Bamplia danos">
+                    SUMA ASEGURADA
+                    <h3>$84,000</h3>
+                    DEDUCIBLE
+                    <h2>10%</h2>
+                            </div>
+            <div class="cobx cotiza Bamplia robo">
+                    SUMA ASEGURADA
+                    <h3>$84,000</h3>
+                    DEDUCIBLE
+                    <h2>10%</h2>
+                            </div>
+            <div class="cobx cotiza Bamplia terceros">
+                    SUMA ASEGURADA
+                    <h3>$4,000,000</h3>
+                    DEDUCIBLE
+                    <h2>10%</h2>
+            </div>
+
+            <div class="cobx cotiza Bamplia gastosM">
+                    SUMA ASEGURADA
+                    <h3>$400,000</h3>
+                    DEDUCIBLE
+                    <h2>0%</h2>
+                            </div>
+            <div class="autoAsistencia">
+                <div class="cobx vial Bamplia">
+                    VIAL <div class="imgAsistencia accepted">SI</div>
+                </div>
+                <div class="cobx legal Bamplia">
+                    LEGAL <div class="imgAsistencia accepted">SI</div>
+                </div>
+            </div>
+
+            <div class="total">
+                <span class="cantidad">Costo total</span>
+                <h2>$ 6,796</h2>
+                <button class="adquirir btn btn-success" id="qualitas">ADQUIRIR</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="atlasRow cotizacion" id="8742.43">
+        <div class="ampliaDiv cotizaDiv">
+            <div class="aseguradora">
+                <div class="logo atlas"></div>
+                <div class="stars">
+                    <div class="star gold"></div>
+                    <div class="star gold"></div>
+                    <div class="star gold"></div>
+                    <div class="star gold"></div>
+                    <div class="star gold"></div>
+                </div>
+            </div>
+            <input type="hidden" name="totalAtlas" id="totalAtlas" value="$ 8,742">
+            <div class="cobx cotiza Bamplia danos">
+                SUMA ASEGURADA
+                <h3>VALOR COMERCIAL</h3>
+                    DEDUCIBLE
+                <h2>10%</h2>
+            </div>
+
+            <div class="cobx cotiza Bamplia robo">
+                SUMA ASEGURADA
+                <h3>VALOR COMERCIAL</h3>
+                    DEDUCIBLE
+                <h2>10%</h2>
+                            </div>
+            <div class="cobx cotiza Bamplia terceros">
+                SUMA ASEGURADA
+                <h3>$4,000,000</h3>
+                    DEDUCIBLE
+                <h2>10%</h2>
+            </div>
+
+            <div class="cobx cotiza Bamplia gastosM">
+                SUMA ASEGURADA
+                <h3>$400,000</h3>
+                    DEDUCIBLE
+                <h2>10%</h2>
+                            </div>
+            <div class="autoAsistencia">
+                <div class="cobx vial Bamplia">
+                    VIAL<div class="imgAsistencia accepted">SI</div>
+                </div>
+                <div class="cobx legal Bamplia">
+                    LEGAL<div class="imgAsistencia accepted">SI</div>
+                </div>
+            </div>
+            
+            <div class="total">
+                    <span class="cantidad">Costo total</span>
+                    <h2>8,742</h2>
+                    <button class="adquirir btn btn-success" id="atlas">ADQUIRIR</button>
+                </div>
+                    </div>
+                    <div class="cintaMesesAtlas cintaMeses row-fluid">
+                <div class="span4">¡Aprovecha Meses Sin Intereses!</div>
+                <div class="span2 selmeses"><i>selecciona:</i></div>
+                <div class="span3"><a href="#facturacion" class="helpTip meseslinkA3" title="">3 Meses</a></div>
+                <div class="span3"><a href="#facturacion" class="helpTip meseslinkA6" title="">6 Meses</a></div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="primasTxt">
+            Los importes presentados son el total a pagar e incluyen impuestos y gastos de emisión. La promoción de Meses Sin Intereses es con forma de pago de contado únicamente.
+        </div>
+    </div>
+    
+    <div id="emisionPaso3" class="panel blockeable" style="position: relative;"> <!--FACTURACION-->
+        <form class="processCompra" method="post" action="#" novalidate="novalidate">
+            <h2>DATOS DE PAGO y FACTURACIÓN</h2>
+            
+            <div class="head">
+                <div class="infoCar">
+                    <div class="imgCar"></div>
+                    <div class="textCar"><span class="automodelo">MAZDA , 2006</span><span class="tipoversion">3 S 4P BA STD., 05 OCUP.</span></div>
+                </div>
+                                                        
+                <div class="coberturaSelected">
+                    <h3>TIPO DE COBERTURA:</h3>
+                <div class="coberSel amplia">AMPLIA</div>
+            
+            </div>
+            
+            <div class="precio">
+                <div class="one prex">
+                    <h3>PRECIO:$ 6,796</h3>
+                </div>
+                
+                <div class="two hidden prex">
+                    <h3>1ER PAGO:$ <br> 2DO PAGO: $ </h3>
+                </div>
+                
+
+                <div class="more hidden prex">
+                    <h3>1ER PAGO:$0 <br>PAGOS $</h3>
+                </div>
+            </div>
+        </div>
+                                                    
+        <div class="datosPagoFact">
+            <div class="divFacturacion">
+                <h3>DATOS DEL CONDUCTOR</h3>
+                
+                <div class="datosAsegurado">
+                    <ul>
+                        <li style="height: 30px;">
+                            <div class="max">
+                                <label class="radio inline"><input type="radio" value="1" name="asegtipopersona" checked="">Persona Física</label>
+                                <label class="radio inline"><input type="radio" value="2" name="asegtipopersona">Persona Moral</label>
+                            </div>
+                        </li>
+                        
+                        <li class="nameConductor">
+                            <div>
+                                <label for="Nombre">Nombre</label>
+                                <input class="input-medium" type="text" name="Nombre" id="Nombre" value="">
+                            </div>
+                                                                        
+                            <div>
+                                <label for="Apellidopaterno">Apellido paterno</label>
+                                <input class="input-medium" type="text" name="Apellidopaterno" id="Apellidopaterno" value="">
+                            </div>
+                            
+                            <div>
+                                <label for="Apellidomaterno">Apellido materno</label>
+                                <input class="input-medium" type="text" name="Apellidomaterno" id="Apellidomaterno" value="">
+
+                            </div>
+                        </li>
+                        
+                        <li class="nameConductor">
+                            <div>
+                                <label for="Nacionalidad">Nacionalidad</label>
+                                    <select type="text" class="input-medium" name="Nacionalidad" id="Nacionalidad">
+                                        <option value="" selected="">Seleccionar</option>                                                                   <option value="MX" selected="selected">México</option>
+                                        <option value="AF">Afganistán</option>
+                                        <option value="AL">Albania</option>                                                                        
+                                        <option value="DE">Alemania</option>                                                                              
+                                        <option value="AD">Andorra</option>                                                                                
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguila</option>
+                                        <option value="AG">Antigua y Barbuda</option>
+                                        <option value="AQ">Antártida</option>
+                                        <option value="SA">Arabia Saudí</option>
+                                        <option value="DZ">Argelia</option> 
+                                        <option value="AR">Argentina</option>                                                                               
+                                        <option value="AM">Armenia</option>                                                                                 
+                                        <option value="AW">Aruba</option>                                                                                   
+                                        <option value="AU">Australia</option>                                                                               
+                                        <option value="AT">Austria</option>                                                                                 
+                                        <option value="AZ">Azerbaiyán</option>                                                                              
+                                        <option value="BS">Bahamas</option>                                                                                 
+                                        <option value="BH">Bahréin</option>                                                                                 
+                                        <option value="BD">Bangladesh</option>                                                                              
+                                        <option value="BB">Barbados</option>                                                                                
+                                        <option value="BZ">Belice</option>                                                                                  
+                                        <option value="BJ">Benín</option>                                                                                   
+                                        <option value="BM">Bermudas</option>                                                                                
+                                        <option value="BY">Bielorrusia</option>                                                                             
+                                        <option value="BO">Bolivia</option>                                                                                 
+                                        <option value="BA">Bosnia-Herzegovina</option>                                                                      
+                                        <option value="BW">Botsuana</option>                                                                                <option value="BR">Brasil</option>                                                                               
+                                        <option value="BN">Brunéi</option>                                                                                  <option value="BG">Bulgaria</option>                                                                                <option value="BF">Burkina Faso</option>                                                                            <option value="BI">Burundi</option>                                                                                 <option value="BT">Bután</option>                                                                                   <option value="BE">Bélgica</option>                                                                                
+                                        <option value="CV">Cabo Verde</option>                                                                              <option value="KH">Camboya</option>                                                                                 <option value="CM">Camerún</option>                                                                                 <option value="CA">Canadá</option>                                                                                  <option value="TD">Chad</option>                                                                                    <option value="CL">Chile</option>                                                                                   <option value="CN">China</option>                                                                                   <option value="CY">Chipre</option>
+                                        <option value="VA">Ciudad del Vaticano</option>
+                                    </select>
+                                </div>
+                                                                        
+                                <div id="divDireccionInternacional">
+                                    <label for="DireccionInternacional">Domicilio en país de origen</label>
+                                    <input class="input-medium" id="DireccionInternacional" value="NO APLICA">
+                                </div>
+                                
+                                <div>
+                                    <label for="Ocupacion">Ocupación</label>
+                                    <select type="text" class="input-medium" name="Ocupacion" id="Ocupacion" required="">
+                                        <option value="" selected="">Seleccionar</option>
+                                        <option value="1">Comerciante</option>
+                                        <option value="2">Empleado</option>
+                                        <option value="3">Empresario</option>
+                                        <option value="4">Permisionario</option>
+                                        <option value="5">Otro</option>
+                                        <option value="6">Transportista</option>
+                                        <option value="7">Hogar</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <li class="personaMoralAseg hide">
+                                <div>
+                                    <label for="RazonSocialAseg">Razón Social Completa</label>
+                                    <input class="input-medium" type="text" name="RazonSocialAseg" id="RazonSocialAseg" value="NO APLICA">
+                                </div>
+
+                                <div class="tiposociedadAseg hide">
+                                    <label for="tipoSociedadAseg">Tipo de Sociedad</label>
+                                    <select id="tipoSociedadAseg" name="tipoSociedadAseg" class="">
+                                        <option value="0">Seleccionar</option>
+                                        <option selected="selected" value="1">SA</option>
+                                        <option value="2">CV</option>
+                                        <option value="3">RL</option>
+                                        <option value="4">AC</option>
+                                        <option value="5">SC</option>
+                                        <option value="6">AF</option>
+                                        <option value="7">AP</option>
+                                        <option value="8">AR</option>
+                                        <option value="9">IP</option>
+                                        <option value="10">MI</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="NombreComerAseg">Nombre Comercial</label>
+                                    <input class="input-medium " type="text" name="NombreComerAseg" id="NombreComerAseg" value="NO APLICA">
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div>
+                                    <label for="RFC">R.F.C</label>
+                                    <input value="" maxlength="13" class="input-medium itext" type="text" name="RFC" id="RFC">
+                                </div>
+                                                                        
+                                <div>
+                                    <label for="CP">Código Postal</label>
+                                    <input value=""  class="input-medium"  maxlength="5" type="text" name="Cp" id="Cp">
+                                </div>
+                                
+                                <div>
+                                    <label for="Colonia">Colonia</label>
+                                    <input value="" class="input-medium" type="text" name="Colonia" id="Colonia" /> 
+                                    <select class="input-medium itext" type="text" name="Colonia" id="Colonia">
+                                        <option value="0930">Juárez</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div id="cpDyn">
+                                    <label for="Calle">Calle</label>
+                                    <input value="" class="input-medium" type="text" name="Calle" id="Calle">
+                                </div>
+
+                                <div>
+                                    <label for="Numext">Número Exterior</label>
+                                    <input class="input-small" type="text" name="Numext" id="Numext" value="" maxlength="10">
+                                </div>
+
+                                <div>
+                                    <label>Referencia del Automóvil</label>
+                                    <select id="selReferencia" name="selReferencia">
+                                        <option value="">Selecciona...</option>
+                                        <option value="PROPIO" selected="selected">Propio</option>
+                                        <option value="FAMILIAR">Familiar</option>
+                                        <option value="OTRO">Otro</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div><label for="Delegacion">Población</label><input type="text" name="Delegacion" disabled="disabled" id="Delegacion" value="" readonly="readonly" class="input-medium itext"></div>
+                                <div><label for="Estado">Estado</label><input type="text" disabled="disabled" name="Estado" id="Estado" value="" readonly="readonly" class="input-medium itext"></div>
+                                <div id="emailDyn"><label for="Correo Electrónico">Correo Electrónico</label><input class="input-medium itext {validate:{ required: true, maxlength: 100, email:true , messages:{required:'Requerido',maxlength:'Has excedido el límite', email:'Ingresa un email válido'}}}" type="text" name="Email" id="Email" value=""></div>
+                            </li>
+                                                                    
+                            <li style="height: 20px; font-size:12px;">
+                                * Contempla que la facturación con una dirección diferente, puede cambiar el monto de la prima total cotizada.
+                            </li>
+                            
+                            <li>
+                                <div class="nextBtn">
+                                    <button type="button" id="goConfirm" class="btn btn-success">CONTINUAR</button>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div id="questionCon" class="">
+                            <h3>¿Deseo facturar con el mismo nombre?</h3>
+                            <label>Sí</label><input type="radio" name="contrata" checked="checked" value="false" id="yesContrata">
+                            <label>No</label><input type="radio" name="contrata" value="true" id="noContrata">
+                        </div>
+
+                        <div id="personaCon" class="hide">
+                            <h3>¿Persona Física o Moral</h3>
+                            <label>Física</label><input type="radio" name="personaTipo" checked="checked" value="fisica" id="personaFisica">
+                            <label>Moral</label><input type="radio" name="personaTipo" value="moral" id="personaMoral">
+                        </div>
+
+                        <div id="formaPago">
+                            <h3>Elige tu método de cobro</h3>
+                            <select id="selFormaPago" name="selFormaPago">
+                                <option value="7" selected="selected">Tarjeta de Crédito</option>
+                                <option value="8">Tarjeta de Débito</option>
+                                <option value="10">Vía Call Center</option>
+                                <option value="11">Depósito Bancario</option>
+                            </select>
+                            
+                            <p class="yellow hide">Sólo con Tarjetas de Crédito Participantes (BANAMEX, HSBC, SANTANDER, BANCOMER)</p>
+                        </div>
+
+                        <div id="benePreferente">
+                            <input type="checkbox" id="checkPreferente" value="true"><h3>¿Requiero <a href="#"> beneficiario preferente</a>? Solo en arrendamiento</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="emisionPaso4" class="panel blockeable3"> <!--CONTRATANTE/PROPIETARIO-->
+        <h2>Datos del contratante</h2>
+        
+        <div class="head">
+            <div class="infoCar">
+                <div class="imgCar"></div>
+                <div class="textCar">
+                    <span class="automodelo">MAZDA , 2006</span>
+                    <span class="tipoversion">3 S 4P BA STD., 05 OCUP.</span>
+                </div>
+            </div>
+            
+            <div class="coberturaSelected">
+                <h3>Tipo de cobertura</h3>
+                <div class="coberSel amplia">AMPLIA</div>
+            </div>
+            
+            <div class="precio">
+                <div class="one prex">
+                    <h3>PRECIO $6,796</h3>
+                </div>
+                
+                <div class="two hidden prex">
+                    <h3>1ER PAGO: $   / 2DO. PAGO: $ </h3>
+                    
+                </div>  
+            </div>
+        </div>
+                                                
+        <div class="datosPagoFact">
+            <div id="divPago">
+                <h3>DATOS DEL AUTO</h3>
+                
+                <div id="datosPago">
+                    <form action="#" method="post" id="confFormAuto">
+                        <dl>
+                            <dt>Marca y año:</dt>
+                            <dd id="resMarca2" class="resMarca">MAZDA 2006</dd>
+                            <dt>Modelo:</dt>
+                            <dd id="resModelo2" class="resModelo">3</dd>
+                            <dt id="serieok">No. Serie:</dt>
+                            <dd id="resSerie2"><input id="serie" type="text" class="input-large"></dd>
+                            <dt>No. Motor:</dt>
+                            <dd id="resMotor2"><input id="motor" type="text" class="input-medium inputTextFact"></dd>
+                            <dt id="placasok">No. Placas:</dt>
+                            <dd id="resPlacas2"><input id="placas" type="text" class="input-medium inputTextFact" maxlength="10"></dd>
+                        </dl>
+                        <input type="hidden" name="pyme_interesse" id="pyme_interesse" value="">
+                        <input type="hidden" name="tipo_emision_interesse" id="tipo_emision_interesse" value="">
+                    </form>
+                </div>
+            </div>
+                                                    
+            <div class="divFacturacion">
+                <h3>FACTURACIÓN</h3>
+                
+                <div class="datosFacturacion factaba">
+                    <form class="processCompraContratante" method="post" action="#">
+                        <ul class="list_facturacion_inputs">
+                            <li class="personaFisica">
+                                <div class="hide">
+                                    <label for="NombreCon">Nombre</label>
+                                    <input class="input-medium" type="text" name="NombreCon" id="NombreCon" value="">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="ApellidopaternoCon">Apellido paterno</label>
+                                    <input class="input-medium" type="text" name="ApellidopaternoCon" id="ApellidopaternoCon" value="">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="ApellidomaternoCon">Apellido materno</label>
+                                    <input class="input-medium" type="text" name="ApellidomaternoCon" id="ApellidomaternoCon" value="">
+                                </div>
+                            </li>
+                            
+                            <li class="personaFisica">
+                                <div class="hide">
+                                    <label for="NacionalidadCon">Nacionalidad</label>
+                                    <select type="text" class="input-medium" name="NacionalidadCon" id="NacionalidadCon">
+                                        <option value="" selected="">Seleccionar</option>
+                                        <option value="MX" selected="selected">México</option>
+                                        <option value="AF">Afganistán</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DE">Alemania</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguila</option>
+                                        <option value="AG">Antigua y Barbuda</option>
+                                        <option value="AQ">Antártida</option>
+                                        <option value="SA">Arabia Saudí</option>
+                                        <option value="DZ">Argelia</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaiyán</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahréin</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BZ">Belice</option>
+                                        <option value="BJ">Benín</option>
+                                        <option value="BM">Bermudas</option>
+                                        <option value="BY">Bielorrusia</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia-Herzegovina</option>
+                                        <option value="BW">Botsuana</option>
+                                        <option value="BR">Brasil</option>
+                                        <option value="BN">Brunéi</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="BT">Bután</option>
+                                        <option value="BE">Bélgica</option>
+                                        <option value="CV">Cabo Verde</option>
+                                        <option value="KH">Camboya</option>
+                                        <option value="CM">Camerún</option>
+                                        <option value="CA">Canadá</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CY">Chipre</option>
+                                        <option value="VA">Ciudad del Vaticano</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoras</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="KP">Corea del Norte</option>
+                                        <option value="KR">Corea del Sur</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Costa de Marfil</option>
+                                        <option value="HR">Croacia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="DK">Dinamarca</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egipto</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="AE">Emiratos Árabes Unidos</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="SK">Eslovaquia</option>
+                                        <option value="SI">Eslovenia</option>
+                                        <option value="ES">España</option>
+                                        <option value="US">Estados Unidos</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Etiopía</option>
+                                        <option value="PH">Filipinas</option>
+                                        <option value="FI">Finlandia</option>
+                                        <option value="FJ">Fiyi</option>
+                                        <option value="FR">Francia</option>
+                                        <option value="GA">Gabón</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GD">Granada</option>
+                                        <option value="GR">Grecia</option>
+                                        <option value="GL">Groenlandia</option>
+                                        <option value="GP">Guadalupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GF">Guayana Francesa</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GQ">Guinea Ecuatorial</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haití</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HU">Hungría</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Irlanda</option>
+                                        <option value="IR">Irán</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italia</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japón</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordania</option>
+                                        <option value="KZ">Kazajistán</option>
+                                        <option value="KE">Kenia</option>
+                                        <option value="KG">Kirguistán</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="LA">Laos</option>
+                                        <option value="LS">Lesoto</option>
+                                        <option value="LV">Letonia</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libia</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lituania</option>
+                                        <option value="LU">Luxemburgo</option>
+                                        <option value="LB">Líbano</option>
+                                        <option value="MK">Macedonia</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MY">Malasia</option>
+                                        <option value="MW">Malaui</option>
+                                        <option value="MV">Maldivas</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MA">Marruecos</option>
+                                        <option value="MQ">Martinica</option>
+                                        <option value="MU">Mauricio</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="FM">Micronesia</option>
+                                        <option value="MD">Moldavia</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="MC">Mónaco</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NO">Noruega</option>
+                                        <option value="NC">Nueva Caledonia</option>
+                                        <option value="NZ">Nueva Zelanda</option>
+                                        <option value="NE">Níger</option>
+                                        <option value="OM">Omán</option>
+                                        <option value="PK">Pakistán</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestina</option>
+                                        <option value="PA">Panamá</option>
+                                        <option value="PG">Papúa Nueva Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="NL">Países Bajos</option>
+                                        <option value="PE">Perú</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PF">Polinesia Francesa</option>
+                                        <option value="PL">Polonia</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="GB">Reino Unido</option>
+                                        <option value="CF">República Centroafricana</option>
+                                        <option value="CZ">República Checa</option>
+                                        <option value="CD">República Democrática del Congo</option>
+                                        <option value="DO">República Dominicana</option>
+                                        <option value="RE">Reunión</option>
+                                        <option value="RW">Ruanda</option>
+                                        <option value="RO">Rumanía</option>
+                                        <option value="RU">Rusia</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="AS">Samoa Americana</option>
+                                        <option value="BL">San Bartolomé</option>
+                                        <option value="KN">San Cristóbal y Nieves</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="MF">San Martín</option>
+                                        <option value="PM">San Pedro y Miquelón</option>
+                                        <option value="VC">San Vicente y las Granadinas</option>
+                                        <option value="SH">Santa Elena</option>
+                                        <option value="LC">Santa Lucía</option>
+                                        <option value="ST">Santo Tomé y Príncipe</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="CS">Serbia y Montenegro</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leona</option>
+                                        <option value="SG">Singapur</option>
+                                        <option value="SY">Siria</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SZ">Suazilandia</option>
+                                        <option value="ZA">Sudáfrica</option>
+                                        <option value="SD">Sudán</option>
+                                        <option value="SE">Suecia</option>
+                                        <option value="CH">Suiza</option>
+                                        <option value="SR">Surinam</option>
+                                        <option value="SJ">Svalbard y Jan Mayen</option>
+                                        <option value="EH">Sáhara Occidental</option>
+                                        <option value="TH">Tailandia</option>
+                                        <option value="TW">Taiwán</option>
+                                        <option value="TZ">Tanzania</option>
+                                        <option value="TJ">Tayikistán</option>
+                                        <option value="TL">Timor Oriental</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad y Tobago</option>
+                                        <option value="TM">Turkmenistán</option>
+                                        <option value="TR">Turquía</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="TN">Túnez</option>
+                                        <option value="UA">Ucrania</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistán</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Vietnam</option>
+                                        <option value="WF">Wallis y Futuna</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="DJ">Yibuti</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabue</option>                                             
+                                    </select>
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="OcupacionCon">Ocupación</label>
+                                    <select type="text" class="input-medium" name="OcupacionCon" id="OcupacionCon">
+                                        <option value="" selected="">Seleccionar</option>                                                                   <option value="1">Comerciante</option>
+                                        <option value="2">Empleado</option>
+                                        <option value="3">Empresario</option>
+                                        <option value="4">Permisionario</option>
+                                        <option value="5">Otro</option>
+                                        <option value="6">Transportista</option>
+                                        <option value="7">Hogar</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="ProfesionCon">Profesión</label>
+                                    <select type="text" class="input-medium" name="ProfesionCon" id="ProfesionCon">
+                                        <option value="" selected="">Seleccionar</option>
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Abogado</option>
+                                        <option value="3">Arquitecto</option>
+                                        <option value="4">Actuario</option>
+                                        <option value="5">Contador</option>
+                                        <option value="6">Docente</option>
+                                        <option value="7">Economista</option>
+                                        <option value="8">Ingeniero</option>
+                                        <option value="9">Médico</option>
+                                        <option value="10">Psicólogo</option>
+                                        <option value="11">Odontólogo</option>
+                                        <option value="12">Químico</option>
+                                        <option value="13">Biólogo</option>
+                                        <option value="14">Sociólogo</option>
+                                        <option value="15">Periodista</option>
+                                        <option value="16">Otro</option>
+                                        <option value="17">Ninguna</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <li class="personaMoral hide">
+                                <div class="hide">
+                                    <label for="RazonSocial">Razón Social Completa</label>
+                                    <input class="input-medium" type="text" name="RazonSocial" id="RazonSocial" value="">
+                                </div>
+                                
+                                <div class="tiposociedad hide">
+                                    <label for="tipoSociedad">Tipo de Sociedad</label>
+                                    <select id="tipoSociedad" name="tipoSociedad" class="">
+                                        <option value="0">Seleccionar</option>
+                                        <option selected="selected" value="1">SA</option>
+                                        <option value="2">CV</option>
+                                        <option value="3">RL</option>
+                                        <option value="4">AC</option>
+                                        <option value="5">SC</option>
+                                        <option value="6">AF</option>
+                                        <option value="7">AP</option>
+                                        <option value="8">AR</option>
+                                        <option value="9">IP</option>
+                                        <option value="10">MI</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="NombreComer">Nombre Comercial</label>
+                                    <input class="input-medium" type="text" name="NombreComer" id="NombreComer" value="">
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="hide">
+                                    <label for="RFCCon">R.F.C</label>
+                                    <input maxlength="13" class="input-medium " type="text" name="RFCCon" id="RFCCon" value="PARR900122">
+                                </div>
+                                
+                                <div id="emailConDyn" class="hide">
+                                    <label for="EmailCon">Correo Electrónico</label>
+                                    <input class="input-medium" type="text" name="EmailCon" id="EmailCon">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="CpCon">Código Postal</label>
+                                    <input class="input-small" type="text" name="CpCon" id="CpCon" maxlength="5">
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="hide">
+                                    <label for="CalleCon">Calle</label>
+                                    <input class="input-medium" type="text" name="CalleCon" id="CalleCon">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="NumextCon">Número Exterior</label>
+                                    <input class="input-small" type="text" name="NumextCon" id="NumextCon" value="" maxlength="10">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="ColoniaCon">Colonia</label>
+                                    <select class="input-medium" name="ColoniaCon" id="ColoniaCon">
+                                        <option value="0" selected="">Seleccionar</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="hide">
+                                    <label for="DelegacionCon">Población</label>
+                                    <input type="text" name="DelegacionCon" disabled="disabled" id="DelegacionCon" value="" readonly="readonly" class="input-medium itext">
+                                </div>
+                                
+                                <div class="hide">
+                                    <label for="EstadoCon">Estado</label>
+                                    <input type="text" disabled="disabled" name="EstadoCon" id="EstadoCon" value="" readonly="readonly" class="input-medium itext">
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                    
+                    <div class="row-fluid list_facturacion">
+                        <div class="span12">
+                            <dl>
+                                <dt class="dt_persona">Nombre a facturar</dt>
+                                <dd class="dd_persona">a b c</dd>
+                                <dt>RFC</dt>
+                                <dd class="dd_rfc">vefl760708lk9</dd>
+                                <dt>Correo electrónico</dt>
+                                <dd class="dd_email">mail@mail.com</dd>
+                                <dt>Dirección</dt>
+                                <dd class="dd_direccion">df 323 Juárez, Cuauhtémoc Distrito Federal CP. 06600</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <div class="row-fluid">
+                        <div class="span1 text-right">
+                            <input type="checkbox" id="acepto">
+                        </div>
+                        
+                        <div class="span11 text_check">
+                            <div class="autorizo">Autorizo a la Institución que me expidió la tarjeta de crédito antes citada, se sirvan a pagar por mi cuenta a QUALITAS COMPAÑIA DE SEGUROS S.A. DE C.V. los cargos por los conceptos, periodicidad y montos que se detallan en la póliza suscrita con la citada Aseguradora.</div>
+                            <div class="aviso_text">He leído el <a target="_blank" href="http://www.interesse.com.mx/privacidad.pdf">aviso de privacidad</a> de este sitio web y Acepto términos y condiciones.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="nextBtn row-fluid text-right">
+                        <button type="button" id="goConfirmCon" class="btn btn-success">CONTINUAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel blockeable2" id="emisionPaso5">
+        <h2>CONFIRMA TU COMPRA</h2>
+        <div id="divPrecio" class="divConf">
+            <div class="imgConf">
+                <h3>COBRANZA</h3>
+            </div>
+            
+            <div id="confAuto" class="divBkg">
+                <div id="formularioPago">
+                    <form action="#" method="post" id="formCobro">
+                        <label for="banco">Banco:</label>
+                            <select id="banco" name="banco" class="">
+                                <option value="02" selected="selected">Banamex</option>
+                                <option value="06">Banco Nacional de Comercio Exterior, S.N</option>
+                                <option value="07">Citibank (México), S.A.</option>
+                                <option value="12">Bancomer, S.A.</option>
+                                <option value="13">Banco Industrial, S.A.</option>
+                                <option value="14">Santander Mexicano, S.A.</option>
+                                <option value="17">Banco Bilbao Vizcaya-México, S.A.</option>
+                                <option value="19">Banco Nacional del Ejército y Fuerza Aérea</option>
+                                <option value="21">HSBC</option>
+                                <option value="22">GE Capital Bank, S.A.</option>
+                                <option value="25">Banco del Sureste, S.A.</option>
+                                <option value="30">Banco del Bajío, S.A.</option>
+                                <option value="32">Ixe Banco, S.A.</option>
+                                <option value="36">Banco Inbursa, S.A.</option>
+                                <option value="37">Banco Interacciones, S.A.</option>
+                                <option value="42">Banca Mifel, S.A.</option>
+                                <option value="44">Scotiabank Inverlat, S.A.</option>
+                                <option value="56">Banca Quadrum, S.A.</option>
+                                <option value="58">Banco Regional de Monterrey, S.A.</option>
+                                <option value="59">Banco Invex, S.A.</option>
+                                <option value="60">Bansí, S.A.</option>
+                                <option value="62">Banco Afirme, S.A.</option>
+                                <option value="68">Banca Prómex, S.A.</option>
+                                <option value="72">Banorte</option>
+                                <option value="100">American Express Company, S.A. De C.V.</option>
+                            </select>
+
+                            <select id="banco_atlas" name="banco_atlas" class="hide">
+                                <option value="1" selected="selected">Banco De Mexico</option>
+                                <option value="2">Banamex</option>
+                                <option value="3">Santander Serfin</option>
+                                <option value="4">Banco Del Atlantico</option>
+                                <option value="6">B. Nacional De Comercio Ex</option>
+                                <option value="7">Citibank, N.A.</option>
+                                <option value="8">Banco Union</option>
+                                <option value="9">Banco Nacional De O Public</option>
+                                <option value="11">Banca Confia S.A.</option>
+                                <option value="12">Bbva Bancomer</option>
+                                <option value="13">Banco Industrial S.A.</option>
+                                <option value="14">Santander Serfin</option>
+                                <option value="16">Banco Interestatal S.A.</option>
+                                <option value="17">Bbva Bancomer</option>
+                                <option value="19">Banco Nac. Del Ejercito</option>
+                                <option value="21">Bital S.A.</option>
+                                <option value="22">GE Capital Bank S.A.</option>
+                                <option value="25">Banco Del Sureste S.A.</option>
+                                <option value="26">B.Nac De Comercio Interior</option>
+                                <option value="28">Banco Capital S.A.</option>
+                                <option value="30">Banco Del Bajio S.A.</option>
+                                <option value="32">Ixe Banco S.A.</option>
+                                <option value="36">Banco Inbursa S.A.</option>
+                                <option value="37">Banco Interacciones S.A.</option>
+                                <option value="100">American Express Company, S.A. De C.V.</option>
+                                <option value="44">Scotiabank S.A.</option>
+                                <option value="47">Banco Promotor Del Norte</option>
+                                <option value="56">Banca Quadrum</option>
+                                <option value="58">Banco Reg De Monterrey</option>
+                                <option value="59">Banco Invex S.A.</option>
+                                <option value="60">Bansi S.A.</option>
+                                <option value="61">Banco De Atoyac S.A.</option>
+                                <option value="62">Banco Afirme S.A.</option>
+                                <option value="63">Banco Sofimex S.A.</option>
+                                <option value="65">Banco Anahuac</option>
+                                <option value="68">Banca Promex</option>
+                                <option value="71">Banpais S.A.</option>
+                                <option value="72">Banorte</option>
+                                <option value="83">Banco De Oriente S.A.</option>
+                                <option value="86">Banco Del Centro</option>
+                                <option value="90">Banoro S.A.</option>
+                                <option value="101">Banca Cremi S.A.</option>
+                                <option value="102">Abn Amro Bank Mexico</option>
+                                <option value="103">American Express Bank Mex</option>
+                                <option value="105">Banco Santander De Negocio</option>
+                                <option value="106">Bank Of America Mexico</option>
+                                <option value="107">Bank Boston S.A.</option>
+                                <option value="108">Bank Of Tokyo</option>
+                                <option value="109">Banco Nacional De Paris</option>
+                                <option value="110">Jp Morgan</option>
+                                <option value="111">Chemical Bank Mexico S.A.</option>
+                                <option value="112">Banco Monex</option>
+                                <option value="113">Dresdner Bank Mexico</option>
+                                <option value="114">Bank One Mexico S.A.</option>
+                                <option value="115">Fuji Bank Mexico S.A.</option>
+                                <option value="116">ING</option>
+                                <option value="117">J.P. Morgan S.A.</option>
+                                <option value="118">Nations Bank</option>
+                                <option value="119">HSBC</option>
+                                <option value="123">Societe Generale Mexico</option>
+                                <option value="124">Deutsche Bank</option>
+                                <option value="126">Credit Suisse Bank</option>
+                                <option value="127">Banco Azteca</option>
+                                <option value="128">Autofin Mexico S.A.</option>
+                                <option value="129">Barclays Bank Mexico</option>
+                                <option value="130">Banco Compartamos</option>
+                                <option value="131">Banco Ahorro Famsa</option>
+                                <option value="132">Banco Multiva</option>
+                                <option value="133">Prudential Bank</option>
+                                <option value="134">Banco Wal-Mart De Mexico Adela</option>
+                                <option value="135">Nacional Financiera Snc</option>
+                                <option value="136">Banco Regional Sa</option>
+                                <option value="137">Bancoppel, S.A.</option>
+                                <option value="138">Banco Amigo</option>
+                                <option value="139">Ubs Bank Mexico</option>
+                                <option value="140">Banco Facil S.A.</option>
+                                <option value="141">Volkswagen Bank</option>
+                                <option value="142">El Banco Deuno</option>
+                                <option value="143">Consultoria Internacional Banc</option>
+                                <option value="149">B Nac De Credito Rural</option>
+                                <option value="161">Banorte</option>
+                                <option value="163">Banco Obrero S.A.</option>
+                                <option value="166">Bansefi</option>
+                                <option value="168">Hipotecaria Federal</option>
+                                <option value="200">Banco Multiva</option>
+                                <option value="201">BX+</option>
+                                <option value="202">Thechase Manhattan Bank</option>
+                                <option value="600">Casa De Bolsa Monex</option>
+                                <option value="601">Casa De Bolsa Gbm</option>
+                                <option value="602">Masari Casa De Bolsa S.A.</option>
+                                <option value="605">Value Casa De Bolsa</option>
+                                <option value="606">Base Internacional Casa De Bol</option>
+                                <option value="607">Casa De Cambio Tiber</option>
+                                <option value="608">Casa De Bolsa Vector</option>
+                                <option value="610">B Y B Casa De Cambio</option>
+                                <option value="613">Multivalores Casa De Bolsa</option>
+                                <option value="614">Accival Casa De Bolsa</option>
+                                <option value="615">Merril Lynch Casa De Bolsa</option>
+                                <option value="616">Casa De Bolsa Finamex</option>
+                                <option value="618">Unica Casa De Cambio Sa De Cv</option>
+                                <option value="619">Mapfre Tepeyac S.A.</option>
+                                <option value="620">Profuturo Gnp Afore</option>
+                                <option value="621">Actinver Casa De Bolsa S.A. D</option>
+                                <option value="622">Actinver S.A. De C.V.</option>
+                                <option value="623">Skandia Vida S.A. De C.V.</option>
+                                <option value="626">Deutsche Securities</option>
+                                <option value="627">Zurich Compaqia De Seguros</option>
+                                <option value="628">Zurich Vida Compaqia De Seguro</option>
+                                <option value="629">Hipotecaria Su Casita</option>
+                                <option value="630">Intercam Casa De Bolsa</option>
+                                <option value="631">Vanguardia Casa De Bolsa S.A.</option>
+                                <option value="632">Bulltick Casa De Bolsa</option>
+                                <option value="633">Sterling Casa De Cambio</option>
+                                <option value="634">Fincomun Servicios Financieros</option>
+                                <option value="636">Hdi Seguros S.A. De C.V.</option>
+                                <option value="637">Order Express Casa De Cambio</option>
+                                <option value="638">Akala S.A. De C.V. Sociedad Fi</option>
+                                <option value="640">J P Morgan Casa De Bolsa S.A.</option>
+                                <option value="644">Casa De Bolsa Banorte S.A. De</option>
+                                <option value="646">Sistemas De Transferencias Y P</option>
+                                <option value="647">Telecomunicaciones De Mexico</option>
+                                <option value="902">SD Indeval S.A De C.V.</option>
+                            </select>                                                                
+
+                            <div id="fechaExp">
+                                <label>Fecha de Expiración:</label>
+                                <div id="mesExp">
+                                    <label>Mes:</label>
+                                    <select id="mes_exp" name="mes_exp">
+                                        <option value="01">1</option>
+                                        <option value="02">2</option>
+                                        <option value="03">3</option>
+                                        <option value="04">4</option>
+                                        <option value="05">5</option>
+                                        <option value="06">6</option>
+                                        <option value="07">7</option>
+                                        <option value="08">8</option>
+                                        <option value="09">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option selected="selected" value="12">12</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label>Año:</label>
+                                    <select id="anio_exp" name="anio_exp">
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div id="datosTarjeta">
+                                <label>Nombre del tarjetahabiente:</label>
+                                <input value="" id="nombretar" type="text" class="input-large">
+                                <label>Número de la tarjeta:</label>
+                                <input value="" id="tarjeta" maxlength="16" type="text" class="input-large">
+                                <label>Código de seguridad:</label>
+                                <input value="" id="cvv" type="password" maxlength="3" class="input-mini">
+                                
+                                <div id="tarjetas"></div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="textDivPago call hide">
+                        <h3>Vía Call Center</h3>
+                        <div class="phoneCall">01800-800-2021</div>
+                        <p>Ten a la mano los siguientes datos que se te solicitarán:</p>
+                        <ul>
+                            <li>Número de Póliza</li>
+                            <li>Datos de tu Tarjeta de Crédito/Débito</li>
+                        </ul>
+                        <p class="yellow">Tu póliza será cancelada en un plazo de 14 días si no se realiza el pago correspondiente.</p>
+                    </div>
+                    
+                    <div class="textDivPago DXN hide">
+                        <h3>Descuento por Nómina</h3>
+                        <p>Una vez que RH nos confirme tu capacidad de pago y seas aceptado dentro de DxN, el costo cotizado se te descontará quincenalmente. En caso de que no seas aceptado te contactaremos para que elijas otra forma de pago.</p>
+                    </div>
+
+                    <div class="textDivPago ref hide">
+                        <h3>Deposito Bancario</h3>
+                        <p>Una vez emitida tu póliza, imprime los recibos y realiza los pagos en los bancos participantes.</p>
+                        <p>O bien, también se indican los datos correspondientes para realizar trasferencia bancaria.</p>
+                        <p>Tu póliza será cancelada en un plazo de 14 días si no se realiza el pago.</p>
+                    </div>
+                    
+                    <div class="textDivPago abaTarjeta hide">
+                        <h3>Tarjeta de Crédito/Débito</h3>
+                        <p>Después de confirmar los datos y ya emitida la póliza, se te solicitarán los datos de tu Tarjeta de Crédito/Débito o Tarjeta American Express, para efectuar el pago de la misma.</p>
+                        <p>Tu póliza será cancelada en un plazo de 14 días si no se realiza el pago.</p>
+                        <p>El monto total cotizado puede variar cambiando el código postal del contratante.</p>
+                    </div>
+                </div>
+                
+                <div id="divAuto" class="divConf">
+                    <div class="imgConf">
+                        <h3>PRECIO Y COBERTURA</h3>
+                    </div>
+                    
+                    <div id="confPrecio" class="divBkg">
+                        <div class="topPrecio">
+                            <div id="asegConf">
+                                <h4>ASEGURADORA</h4>
+                                <div id="logo_confirma" class="logo qualitas"></div>
+                            </div>
+                            
+                            <div id="precioConf" class="ocultable">
+                                <h4>PRECIO</h4>
+                                <div class="one prex">
+                                    <dl>
+                                        <dt>FORMA DE PAGO:</dt>
+                                        <dd class="tipoPago">CONTADO</dd>
+                                        <dt>1 PAGO DE:</dt>
+                                        <dd><h3>$ 6,796</h3></dd>
+                                    </dl>
+                                </div>
+
+                                <div class="two hidden prex">
+                                    <dl>
+                                        <dt>FORMA DE PAGO:</dt>
+                                        <dd class="tipoPago">CONTADO</dd>
+                                        <dt>PRIMER PAGO:</dt>
+                                        <dd><h3 class="double"><span class="yellow pago1"></span></h3></dd>
+                                        <dt>2DO PAGO:</dt>
+                                        <dd><h3 class="double"><span class="yellow pago2"></span></h3></dd>
+                                    </dl>
+                                </div>
+                                                                <div class="more hidden prex">
+                                                                    <dl>
+                                                                        <dt>FORMA DE PAGO:</dt>
+                                                                        <dd class="tipoPago">CONTADO</dd>
+                                                                        <dt>PRIMER PAGO:</dt>
+                                                                        <dd><h3 class="double"><span class="yellow pago1"></span></h3></dd>
+                                                                        <dt><span class="cuantosPagos">0</span> PAGOS:</dt>
+                                                                        <dd><h3 class="double"><span class="yellow pago2"></span></h3></dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cobertura">
+                                                            <h4><cufon class="cufon cufon-canvas" alt="COBERTURA" style="width: 92px; height: 25px;"><canvas width="109" height="31" style="width: 109px; height: 31px; top: -5px; left: -1px;"></canvas><cufontext>COBERTURA</cufontext></cufon></h4>
+                                                            <div class="coberSel amplia">AMPLIA</div>
+                                                        </div>
+                                                        <div class="list">
+                                                            <ul class="coberturasOn">
+                                                                <li>DAÑOS MATERIALES</li>
+                                                                <li>ROBO TOTAL</li>
+                                                                <li>DAÑOS A TERCEROS</li>
+                                                                <li>GASTOS MÉDICOS</li>
+                                                                <li>ASISTENCIA LEGAL</li>
+                                                                <li>ASISTENCIA VIAL</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="divCobro" class="divConf">
+                                                    <div class="imgConf"><h3><cufon class="cufon cufon-canvas" alt="COBRO " style="width: 83px; height: 35px;"><canvas width="114" height="43" style="width: 114px; height: 43px; top: -7px; left: -2px;"></canvas><cufontext>COBRO </cufontext></cufon><cufon class="cufon cufon-canvas" alt="Y " style="width: 21px; height: 35px;"><canvas width="53" height="43" style="width: 53px; height: 43px; top: -7px; left: -2px;"></canvas><cufontext>Y </cufontext></cufon><cufon class="cufon cufon-canvas" alt="FACTURA" style="width: 95px; height: 35px;"><canvas width="120" height="43" style="width: 120px; height: 43px; top: -7px; left: -2px;"></canvas><cufontext>FACTURA</cufontext></cufon></h3></div>
+                                                    <div id="confCobro" class="divBkg">
+                                                        <!-- <div id="formaPagoResumen" class="hide">
+                                                        <h4>FORMA DE PAGO</h4>
+                                                        <h3>VÍA CALL CENTER</h3>
+                                                        </div>
+                                                        <div id="divTarjeta">
+                                                        <h4>TARJETA:</h4>
+                                                        <dl>
+                                                        <dt>Nombre del tarjeta-habiente:</dt>
+                                                        <dd class="confirm_nom">Esmeralda Mendez Godinez</dd>
+                                                        <dt>Número de la tarjeta:</dt>
+                                                        <dd class="confirm_tdc">XXXX-XXXX-XXXX-XXXX-</dd>
+                                                        <dt>Banco:</dt>
+                                                        <dd class="confirm_banco">IXE</dd>
+                                                        <dt>Expiración:</dt>
+                                                        <dd class="confirm_date">05/14</dd>
+                                                        </dl>
+                                                        </div>-->
+                                                        <div id="divFact">
+                                                            <h4><cufon class="cufon cufon-canvas" alt="FACTURACIÓN" style="width: 107px; height: 25px;"><canvas width="123" height="31" style="width: 123px; height: 31px; top: -5px; left: -1px;"></canvas><cufontext>FACTURACIÓN</cufontext></cufon></h4>
+                                                            <dl>
+                                                                <dt>Nombre:</dt>
+                                                                <dd class="confirm_nombrecompleto">a b c</dd>
+                                                                <dt>Dirección:</dt>
+                                                                <dd class="short confirm_direccion"∫>df Col. Juárez Cuauhtémoc , Distrito Federal</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <button id="checkout" class="btn btn-success btn-large">COMPRAR</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+</body>
+</html>
+
+
+
+

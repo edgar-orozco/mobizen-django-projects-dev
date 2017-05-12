@@ -1,0 +1,73 @@
+#generic-modal .form-horizontal{
+    margin-bottom: 0 !important;
+}
+
+#modal-form .control-group{
+    margin-top:10px;
+}
+
+#modal-form  .alert{
+    margin-top:10px;
+}
+
+#modal-form  .control-group .control-label{
+    font-weight: bold;
+    text-align:left !important;
+    padding-top:0;
+    float: left;
+}
+        
+#modal-form  .control-group .controls{
+    width: 100%;
+}
+
+@media all and (min-width: 768px) {
+    #modal-form  .control-group .controls{
+        width: 400px;
+        display: inline-block;
+    }
+}
+
+div.modal-header h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px;
+    width: 500px;
+}
+
+
+
+div.modal-body textarea {
+    width:100%;
+    height: 100px;
+}
+
+.modal-body {
+    padding: 15px !important;
+}
+
+.modal-footer {
+    margin-top:0px !important;
+}
+.modal_icon {
+    display:inline-block;
+    vertical-align: middle;
+    height:36px;
+    width:36px;
+    background-size:36px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-right:15px;
+}
+
+#modal-form .control-group .control-label {
+    width: 100% !important;
+}
+
+@media all and (min-width: 768px) {
+    #modal-form .control-group .control-label {
+        max-width: 100px !important;
+    } 
+}
+
+

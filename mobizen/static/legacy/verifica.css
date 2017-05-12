@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background		:	#2a2d2f;
+	font-family		:	Arial, Helvetica, sans-serif;
+	font-size		:	14px;
+	color			:	#fff;
+	line-height		:	20px;
+	margin			:	0;
+	padding			:	0;
+}
+
+h1, h2 {
+	display		:	block;
+	margin		:	0;
+	color 		:	#8e8686;
+	padding		:	4px 15px;
+	font-size	:	18px;
+
+}
+	
+ol  {
+	margin	:	0;	
+}
+
+ol li{
+	padding	:	8px 0px;
+	
+}
+
+ol li span{
+	display			:	block;
+	padding-right	:	25px;
+	}
+
+.contenido p{
+	margin	:	10px 10px 10px 20px;
+	}
+
+.nota { 
+	color		:	#8e8686;
+	font-size	:	12px; 
+	margin		:	10px 10px 10px 20px;
+	}
+
+a  { 
+	color	:	#a6dbec;
+	}
+
+.no-border {
+	border	:	none;
+	}

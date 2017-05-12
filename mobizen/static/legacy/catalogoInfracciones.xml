@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Sin Licencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Sin Tarjeta de Circulación</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Desobedecer Señalamientos</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Sentido Contrario</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Exceso de Velocidad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Sin Cinturón de Seguridad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Vehículo Extranjero sin Papeles</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Rebase Ilegal</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>5</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>Giro Sin Aviso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Circular Sobre Banquetas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Circular en Contraflujo</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Invasión Paso Peatonal</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Reversa Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Vuelta Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Carril Prohibido</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Ascenso/Descenso Prohibido</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Exceso de Pasajeros</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>Menores al Frente</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>X</string>
+		<key>Descripcion</key>
+		<string>Pasajero en Carrocería</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XI</string>
+		<key>Descripcion</key>
+		<string>Uso de Celular</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XII</string>
+		<key>Descripcion</key>
+		<string>Obstruir Eventos Cívicas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XIII</string>
+		<key>Descripcion</key>
+		<string>Antiradar</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XIV</string>
+		<key>Descripcion</key>
+		<string>Ofender Autoridad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XV</string>
+		<key>Descripcion</key>
+		<string>Vuelta Prohibida Metrobús</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XVI</string>
+		<key>Descripcion</key>
+		<string>Invadir Ciclovías</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>6</string>
+		<key>Fraccion</key>
+		<string>XVII</string>
+		<key>Descripcion</key>
+		<string>Estacionar en Ciclovías</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>7</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>No Circula</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Desobedecer Agente</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Ignorar Luz Roja</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>No Respetar Luz Intermitente</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>No Respetar Preferencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Obstruir Calle Transversal</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Vuelta Continua</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>No Respetar Preferencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>No Respetar Preferencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>X</string>
+		<key>Descripcion</key>
+		<string>No Respetar Preferencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>XI</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>8</string>
+		<key>Fraccion</key>
+		<string>XII</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>9</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Peatón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>11</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Ciclista</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>11</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Ciclista</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>11</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Ciclista</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>11</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Ciclista</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>11</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>No Ceder Paso a Ciclista</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Estacionar en Vías Primarias</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Estacionar Doble Fila</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>Estacionar Área Peatonal</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>X</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>XI</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>XII</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>XIII</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>XIV</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>12</string>
+		<key>Fraccion</key>
+		<string>XV</string>
+		<key>Descripcion</key>
+		<string>Estacionar Zona Prohibida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>13</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Parquímetro Agotado</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Reparaciones en Vía Pública</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Obstruir Vialidad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Obstruir Vialidad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Vehículo Abandonado</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Reservar Estacionamiento</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Arrancones</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>14</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Obstruir Vialidad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>15</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>No Señalizar</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>No Traer Gasolina</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Faros No Funcionan</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Luces Adicionales No Sirven</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Cuartos No Funcionan</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Llantas en Mal Estado</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Falta Equipo de Emergencia</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Falta de Espejos </string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Defensas Incompletas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>No Cuenta con Cinturones</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>X</string>
+		<key>Descripcion</key>
+		<string>Parabrisas Roto</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>16</string>
+		<key>Fraccion</key>
+		<string>XI</string>
+		<key>Descripcion</key>
+		<string>No Cuenta con GPS</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>17</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Sin Placas/Permiso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>17</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>No Porta Calcomanía</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>17</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Sin Verificación Vigente</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>17</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>No Porta Distintivo Discapacidad</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>18</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Remolque No Cubre Requisitos</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Imagen Indebida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Dispositivos Indebidos</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Faros Deslumbrantes</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Neón en Placa</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Publicidad no Autorizada</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>TV en Cabina</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>19</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Polarizado Extremo</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>31</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Bajo Influencia del Alcohol</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>32</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Bajo Influencia del Alcohol</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>34</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Sin Seguro Responsabilidad Civil</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Sin Tarjetón</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Circular por Carril Derecho</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Circular con Puertas Abiertas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Ascendo/Descenso Prohibido</string>
+	</dict>	
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Ascenso/Descenso en Movimiento</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Circular sin Luces Interiores</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Estacionar/Base no Autorizada</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Bicitaxi</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>22</string>
+		<key>Fraccion</key>
+		<string>IX</string>
+		<key>Descripcion</key>
+		<string>Rebase Ilegal a Ciclistas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Rebase Ilegal</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Ascenso/Descenso Prohibido</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Vidrios Polarizados</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Visibilidad Obstruida</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Pantallas/TVs prohibidas</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Faros Deslumbrantes</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Cargar Gasolina con Pasaje</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>23</string>
+		<key>Fraccion</key>
+		<string></string>
+		<key>Descripcion</key>
+		<string>Circular Carriles Prohibidos</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>24</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Circular en Carriles Centrales</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>24</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>Carga Irregular</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>I</string>
+		<key>Descripcion</key>
+		<string>Circular por Carril Derecho</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>II</string>
+		<key>Descripcion</key>
+		<string>No Respetar Días y Horarios</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>III</string>
+		<key>Descripcion</key>
+		<string>Estacionar/Base no Autorizada</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>IV</string>
+		<key>Descripcion</key>
+		<string>Sin Placas/Permiso</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>V</string>
+		<key>Descripcion</key>
+		<string>Sin Licencia Vigente</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>VI</string>
+		<key>Descripcion</key>
+		<string>Derrame de Sustancias</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>VII</string>
+		<key>Descripcion</key>
+		<string>Carga/Descarga Irregular</string>
+	</dict>
+	<dict>
+		<key>Articulo</key>
+		<string>25</string>
+		<key>Fraccion</key>
+		<string>VIII</string>
+		<key>Descripcion</key>
+		<string>Sin Señalamientos/Autorización</string>
+	</dict>
+</array>
+</plist>

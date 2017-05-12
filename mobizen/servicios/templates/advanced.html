@@ -1,0 +1,20 @@
+{% extends "admin/change_form.html" %}
+
+{% block admin_change_form_document_ready %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function newParameters(query) {
+                query.estado = $('#id_direccion-0-estado').val();
+                query.municipio = $('#id_direccion-0-municipio_0').val();
+            }
+            $('#id_direccion-0-municipio_0').djselectable('option', 'prepareQuery', newParameters);
+            $('#id_direccion-0-colonia_0').djselectable('option', 'prepareQuery', newParameters);
+            function newParams(query) {
+                query.estado = $('#id_estado').val();
+                query.municipio = $('#id_municipio_0').val();
+            }
+            $('#id_municipio_0').djselectable('option', 'prepareQuery', newParams);
+            $('#id_colonia_0').djselectable('option', 'prepareQuery', newParams);
+        });
+    </script>
+{% endblock %}

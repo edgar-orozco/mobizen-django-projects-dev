@@ -1,0 +1,33 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block bootstrap3_title %}{{ site_title|default:_('Verificación a domicilio') }}{% endblock %}
+{% block bootstrap3_extra_head %}
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,600' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/verificacion-domicilio.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block bootstrap3_content %}
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6"><h1><img src="{% static 'img/logo-verifica@2x.png' %}" width="200"  alt="Verifica"></h1></div>
+          <div class="col-xs-6 text-right"><h1 class="pad-top"><img src="{% static 'img/drivemee-logo.png' %}" width="220"  alt="Verifica"></h1></div>
+        </div>
+      </div>
+    </header>
+    
+{% block content %}
+{% endblock %}
+
+    <section id="descarga" class="columna-central">
+      <img src="{% static 'img/icono-verifica-mini.png' %}" alt="">
+      <h1>Descarga Verifica</h1>
+      <a href="https://play.google.com/store/apps/details?id=mobizen.verifica.UI" target="_new"><img src="{% static 'img/stores-google-play@2x.png' %}" width="147" alt=""></a>
+      <a href="http://itunes.apple.com/mx/app/verifica/id440844137?mt=8" target="_new"><img src="{% static 'img/stores-app-store@2x.png' %}" width="152" alt=""></a>
+      <img src="{% static 'img/Disponible-en-AW.png' %}" width="140" alt="">
+    </section>
+{% endblock %}

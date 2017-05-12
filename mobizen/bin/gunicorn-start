@@ -1,0 +1,35 @@
+#!/bin/bash
+
+NAME="mobizen"                                  # Name of the application
+DJANGODIR=/home/django/django-projects/mobizen             # Django project directory
+SOCKFILE=/home/django/django-projects/mobizen/gunicorn.sock  # we will communicte using this unix socket
+USER=django                                        # the user to run as
+GROUP=www-data                                     # the group to run as
+NUM_WORKERS=2                                   # how many worker processes should Gunicorn spawn
+DJANGO_SETTINGS_MODULE=mobizen.settings             # which settings file should Django use
+DJANGO_WSGI_MODULE=mobizen.wsgi                     # WSGI module name
+TIMEOUT=120
+WORKER=gevent
+echo "Starting $NAME as `whoami`"
+
+# Activate the virtual environment
+#cd $DJANGODIR
+#source ../bin/activate
+#export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+#export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+# Create the run directory if it doesn't exist
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+# Start your Django Unicorn
+# Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
+exec gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $NUM_WORKERS \
+  --user=$USER --group=$GROUP \
+  --bind=unix:$SOCKFILE \
+  --log-level=debug \
+  --log-file=- \
+  --timeout $TIMEOUT \
+  -k $WORKER

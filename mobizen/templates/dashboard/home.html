@@ -1,0 +1,18 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}django-bootstrap3{% endblock %}
+
+{% block content %}
+    This is <em>bootstrap3</em> for <strong>Django</strong>.
+
+{% if client_list %}
+    <ul>
+    {% for client in client_list %}
+        <li><a href="/clients/{{ client.deviceToken }}/">{{ client.deviceToken }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No clients are available.</p>
+{% endif %}
+
+{% endblock %}

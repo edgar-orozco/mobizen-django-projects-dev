@@ -1,0 +1,15 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block bootstrap3_title %}{{ site_title|default:_('DriveMee') }}{% endblock %}
+{% block bootstrap3_extra_head %}
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,600' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/estilos-drivemee.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+{% block extra_js %}
+{% endblock %}
+{% endblock %}
+{% block bootstrap3_content %}(no content){% endblock %}

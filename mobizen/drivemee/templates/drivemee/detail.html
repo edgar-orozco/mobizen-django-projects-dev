@@ -1,0 +1,339 @@
+{% extends "drivemee/base.html" %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'django_modalview/js/django_modal_view.js' %}"></script>
+    <script type="text/javascript" src="{% static 'drivemee/js/mymodal.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'django_modalview/css/modal.css' %}" type="text/css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwPmUe198mzBkDZgd9GGbnvQIDN567R3U"></script>
+    <script src="{% static 'django_modalview/js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap-datetimepicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/locales/bootstrap-datetimepicker.es.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/datetimepicker.css' %}" type="text/css" />
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Detalle Folio: <span class="folio">{{ solicitud.internal_folio }}</span></h1>
+                </div>
+
+                <div class="col-md-6 estado text-right">
+                    Hora de Solicitud: {{ solicitud.timestamp_abierto }}<br>
+                    <span>Estado: {% if is_snoozed %}pospuesta{% else %}{{ solicitud.status }}{% endif %}</span>
+                    {% if is_snoozed %}<br>
+                    Pospuesta hasta: {{ solicitud.snooze_until_date|date:"l d M H:i" }}{% endif %}
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Datos del Cliente {% if solicitud.status == 'abierto' or solicitud.status == 'pendiente' or solicitud.status == 'preagendado' %}<a id="datos_modal" class="glyphicon glyphicon-pencil" href="{% url 'drivemee:solicitud-edit-client' source=source status=status pk=solicitud.pk %}"></a>{% endif %}</h2>
+                        </div> <!-- col -->
+
+                        <!-- ACCIONES PRINCIPALES -->
+                        <div class="col-md-6 text-right">
+                            <button class="btn btn-secondary margin-left" id="notes_modal" href="{% url 'drivemee:solicitud-notes' source=source status=status pk=solicitud.pk %}">Nota</button>
+                        {% if solicitud.status == 'agendado' %}
+                            <button class="btn btn-warning margin-left" id="snooze_modal" href="{% url 'drivemee:solicitud-iniciar' source=source status=status pk=solicitud.pk %}">Iniciar</button>
+                        
+                            <button class="btn {% if not solicitud.operador %}btn-primary{% else %}btn-secondary{% endif %} margin-left" id="operador_modal" href="{% url 'drivemee:solicitud-operador' source=source status=status pk=solicitud.pk %}">{% if not solicitud.operador %}Asignar Operador{% else %}Cambiar Operador{% endif %}</button>
+                       
+                        {% endif %}
+
+                        {% if solicitud.status == 'abierto' %}
+                        
+                            <button class="btn btn-secondary margin-left" id="snooze_modal" href="{% url 'drivemee:solicitud-snooze' source=source status=status pk=solicitud.pk %}">Posponer</button>
+                            <button class="btn btn-info margin-left" id="preagendar_modal" href="{% url 'drivemee:solicitud-preagendar' source=source status=status pk=solicitud.pk %}">Preagendar</button>
+                            {% if solicitud.force_payment %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedule' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Agendar</button>
+                            {% else %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedulenopay' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Agendar</button>
+                            {% endif %}
+
+                        {% elif solicitud.status == 'preagendado' %}
+                            {% if solicitud.force_payment %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedule' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Agendar</button>
+                            {% else %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedulenopay' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Agendar</button>
+                            {% endif %}
+
+                        {% elif solicitud.status == 'agendado' %}
+                            {% if solicitud.force_payment %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedule' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Reagendar</button>
+                            {% else %}
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href={% if direcciones_list|length %}"{% url 'drivemee:solicitud-schedulenopay' source=source status=status pk=solicitud.pk %}"{% else %}"{% url 'drivemee:solicitud-error' source=source status=status pk=solicitud.pk %}"{% endif %}>Reagendar</button>
+                            {% endif %}
+                                               
+                        {% elif solicitud.status == 'proceso' %}
+                            <button class="btn btn-warning margin-left" id="snooze_modal" href="{% url 'drivemee:solicitud-retirar' source=source status=status pk=solicitud.pk %}">Retirar</button>
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href="{% url 'drivemee:solicitud-verificar' source=source status=status pk=solicitud.pk %}">Asignar Resultado</button>
+                        
+                        {% elif solicitud.status == 'verificado' %}
+                        
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href="{% url 'drivemee:solicitud-cerrar' source=source status=status pk=solicitud.pk %}">Cerrar Solicitud</button>
+                        
+                        {% elif solicitud.status == 'cerrado' and solicitud.resultado.resultado == 'RECHAZO' %}
+                        
+                            <button class="btn btn-primary margin-left" id="schedule_modal" href="{% url 'drivemee:solicitud-reschedule' source=source status=status pk=solicitud.pk %}">Reagendar Solicitud</button>
+                        
+                        {% endif %}
+
+                        </div> <!-- FIN ACCIONES PRINCIPALES-->
+                        
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Nombre:</span>{{ solicitud.nombre|title }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">E-mail:</span>{{ solicitud.email|lower }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Teléfono:</span>{{ solicitud.telefono }}</li>
+                            </ul> <!-- datos personales -->
+                        </div> <!-- col -->
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                {% if solicitud.cita %}
+                                <li class="list-group-item dato"><span class="etiqueta">Cita:</span>{{ solicitud.cita.fecha }}</li>{% endif %}
+                                {% if solicitud.timestamp_cerrado %}
+                                <li class="list-group-item dato"><span class="etiqueta">Hora de Cierre:</span>{{ solicitud.timestamp_cerrado }}</li>{% endif %}
+                                {% if solicitud.cupon %}
+                                <li class="list-group-item dato"><span class="etiqueta">Cupón:</span>{% if solicitud.cupon.name %}{{ solicitud.cupon.name }}{% else %} {{ solicitud.cupon.codigo }}{% endif %}</li>{% endif %}
+                                {% if solicitud.operador %}
+                                <li class="list-group-item dato"><span class="etiqueta">Operador:</span><a href="{% url 'drivemee:operador-detail' pk=solicitud.operador.pk %}">{{ solicitud.operador.nombre|title }}</a></li>{% endif %}
+                                {% if solicitud.status == 'abierto' or solicitud.status == 'preagendado' and meses_list %}
+                                {% for mes1,mes2 in meses_list %}
+                                <li class="list-group-item dato"><span class="etiqueta">Periodo Verificación</span>{{ mes1|date:"F" }} - {{ mes2|date:"F" }}</li>
+                                {% endfor %}
+                                {% if extemporaneo %}
+                                <li class="list-group-item dato"><span class="etiqueta">Extemporáneo:</span><span class="glyphicon glyphicon-ok glyphicon-green"></li>{% endif %}
+                                {% if is_late %}
+                                <li class="list-group-item dato"><span class="etiqueta">Última Semana:</span><span class="glyphicon glyphicon-ok glyphicon-green"></li>{% endif %}
+                                {% endif %}
+                                {% if precios_verificacion %}
+                                {% for precio in precios_verificacion %}
+                                <li class="list-group-item dato"><span class="etiqueta">Tarifa {{ precio.tipo }}:</span>{{ precio.precio }}</li>
+                                {% endfor %}
+                                {% endif %}
+                                {% if solicitud.costo_real %}
+                                <li class="list-group-item dato"><span class="etiqueta">Tarifa:</span>{{ solicitud.costo_real }}</li>
+                                {% endif %}
+                                {% if solicitud.linked_solicitudes %}
+                                <li class="list-group-item dato"><span class="etiqueta">Solicitud Anterior:</span><a href="{% url 'drivemee:solicitud-detail' source=source status=status pk=solicitud.linked_solicitudes.pk %}">{{ solicitud.linked_solicitudes.internal_folio }}</a></li>
+                                {% endif %}
+                                {% if solicitud.linkeadas %}
+                                {% for sol in solicitud.linkeadas.all %}
+                                <li class="list-group-item dato"><span class="etiqueta">Nueva Solicitud:</span><a href="{% url 'drivemee:solicitud-detail' source=source status=status pk=sol.pk %}">{{ sol.internal_folio }}</a></li>
+                                {% endfor %}
+                                {% endif %}
+                                {% if solicitud.recibo %}
+                                {% if solicitud.recibo.status == 'pagado' %}
+                                <li class="list-group-item dato"><span class="etiqueta">Pagado:</span><span class="glyphicon glyphicon-ok glyphicon-green"></li>
+                                <li class="list-group-item dato"><span class="etiqueta">Fecha de Pago:</span>{{ solicitud.recibo.timestamp_pagado }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">ID Conekta:</span>{{ solicitud.recibo.conekta_id }}</li>
+                                {% else %}
+                                <li class="list-group-item dato"><span class="etiqueta">Pagado:</span><span class="glyphicon glyphicon-remove glyphicon-red"></li>
+                                {% endif %}
+                                {% endif %}
+
+                            </ul> <!-- datos solicitud -->
+                        </div> <!-- col -->
+                    </div> <!-- row --><!-- Cliente -->
+                    <div>
+    {% if solicitud.notas.all %}
+            <h2>Notas</h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    		{% for nota in solicitud.notas.all %}
+                            <tr>
+                                <td>{{ nota.timestamp|date:"d/M/Y H:i" }}</td>
+                                <td>{{ nota.motivo }}</td>
+                            </tr>
+                    {% endfor %}
+                        </tbody>
+                    </table>
+                </div> <!-- col -->
+            </div> <!-- row -->
+    {% endif %}
+
+                    </div>
+                    {% if solicitud.reporte %}
+                    <h2>Detalles Cancelación</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Comentarios:</span>{{ solicitud.reporte.motivo }}</li>
+                            </ul>
+                        </div> <!-- col -->
+                    </div> <!-- row -->{% endif %}
+                    {% if solicitud.evaluacion %}
+                    <h2>Evaluación del Servicio</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Hora:</span>{{ solicitud.evaluacion.timestamp }}</li>
+        {% if solicitud.evaluacion.no_quiso_calificar and not solicitud.evaluacion.comentarios %}
+                                <li class="list-group-item dato"><span class="etiqueta">No Quiso Calificar:</span><span class="glyphicon glyphicon-remove glyphicon-red"></li>
+        {% elif solicitud.evaluacion.calificacion > 0 %}
+                                <li class="list-group-item dato"><span class="etiqueta">Calificación:</span>{{ solicitud.evaluacion.calificacion }}</li>
+                                {% endif %}
+        {% if solicitud.evaluacion.comentarios %}
+                                <li class="list-group-item dato"><span class="etiqueta">Comentarios:</span>{{ solicitud.evaluacion.comentarios }}</li>{% endif %}
+                            </ul>
+                        </div> <!-- col -->
+                    </div> <!-- row -->{% endif %}
+                    <h2>Datos del Vehículo</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-group">
+                                <li class="list-group-item dato"><span class="etiqueta">Placa:</span>{{ solicitud.placa }}  <a class="glyphicon glyphicon-link" target="_blank" href="https://pzmury5.verifica.mx/verifica/v1/verificacion/?type=full&placa={{ solicitud.placa }}"></a></li>
+                                <li class="list-group-item dato"><span class="etiqueta">Marca:</span>{{ solicitud.marca }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Submarca:</span>{{ solicitud.submarca }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Modelo:</span>{{ solicitud.modelo }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Holograma:</span>{{ solicitud.ultimo_holograma }}</li>
+                            </ul>
+                        </div> <!-- col -->
+                        {% if solicitud.status == 'cerrado' or solicitud.status == 'reagendado' or solicitud.status == 'verificado' %}
+                        <div class="col-md-6">
+                            <ul class="list-group">        
+                                <li class="list-group-item dato"><span class="etiqueta">Fecha Verificación:</span>{{ solicitud.resultado.timestamp }}</li>
+                                <li class="list-group-item dato"><span class="etiqueta">Resultado Obtenido:</span> {{ solicitud.resultado.resultado }}</li>
+</ul>
+                        {% else %}
+                        <div class="col-md-6">
+                            <ul class="list-group">        
+                                <li class="list-group-item dato"><span class="etiqueta">Seguro:</span> {% if solicitud.documentos.seguro %}<span class="glyphicon glyphicon-ok glyphicon-green">{% else %}<span class="glyphicon glyphicon-remove glyphicon-red"></li>{% endif %}
+                                <li class="list-group-item dato"><span class="etiqueta">Sin Adeudos:</span> {% if solicitud.documentos.adeudos %}<span class="glyphicon glyphicon-ok glyphicon-green">{% else %}<span class="glyphicon glyphicon-remove glyphicon-red"></li>{% endif %}
+                                <li class="list-group-item dato"><span class="etiqueta">Tarjeta de Circulación:</span> {% if solicitud.documentos.tarjeta %}<span class="glyphicon glyphicon-ok glyphicon-green">{% else %}<span class="glyphicon glyphicon-remove glyphicon-red"></li>{% endif %}
+                                <li class="list-group-item dato"><span class="etiqueta">Leyó lista de Documentos:</span> {% if solicitud.documentos.enterado %}<span class="glyphicon glyphicon-ok glyphicon-green">{% else %}<span class="glyphicon glyphicon-remove glyphicon-red"></li>{% endif %}
+                            </ul>
+                        </div> <!-- col -->{% endif %}
+                    </div> <!-- row -->
+                    <!-- datos vehiculo-->
+                </div>    <!-- col -->            
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    {% if solicitud.status == 'abierto' or solicitud.status == 'preagendado' or solicitud.status == 'agendado' or solicitud.status == 'proceso' or solicitud.status == 'verificado' %}
+   {% if direcciones_list|length %}
+    <section>
+        <div class="container">
+            <h2>Domicilio {% if direcciones_list|length == 1  and solicitud.status == 'abierto' or solicitud.status == 'agendado' %}  <a type="button" id="domicilio_modal_2"  href="{% url 'drivemee:solicitud-domicilio-create' source=source status=status pk=solicitud.pk %}" >Agregar Domicilio</a> {% endif %}</h2>
+            {% for direccion in direcciones_list %}
+            <div class="row">
+                <div class="col-md-6">            
+                    <h3>{% if direccion.tipo == 'entrega' %}Entrega{% elif direccion.tipo == 'recoleccion' %}Recolección{% else %}Entrega y Recolección{% endif %}{% if solicitud.status == 'abierto' or solicitud.status == 'agendado' %}<a id="domicilio_modal_{{ forloop.counter }}" class="glyphicon glyphicon-pencil" href="{% url 'drivemee:solicitud-domicilio-edit' source=source status=status pk=solicitud.pk domicilio=direccion.pk %}"></a>{% endif %}</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item dato"><span class="etiqueta">Calle:</span>{{ direccion.calle }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Num. Ext:</span>{{ direccion.numero_exterior }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Num. Int:</span>{{ direccion.numero_interior }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Colonia:</span>{{ direccion.colonia }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Delegacion:</span>{{ direccion.municipio }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Estado:</span>{{ direccion.estado }}</li>
+                        <li class="list-group-item dato"><span class="etiqueta">Código Postal:</span>{{ direccion.codigo_postal }}</li>
+                        {% if direccion.longitud and direccion.latitud %}
+                        <li class="list-group-item dato"><span class="etiqueta">Coordenadas:</span> {{ direccion.latitud|slice:"12" }}, {{ direccion.longitud|slice:"12" }}</li>
+                        {% endif %}
+                        <li class="list-group-item dato"><span class="etiqueta">Referencias:</span> {{ direccion.referencias }}</li>
+                    </ul>
+                </div> <!-- col -->
+                <div class="col-md-6">
+                    <div id="map{{ forloop.counter }}" class="map"></div>
+                </div>
+            </div> <!-- row -->
+            {% endfor %}
+            
+        </div> <!-- container -->
+    </section>
+    {% elif solicitud.status == 'abierto' or solicitud.status == 'agendado' or solicitud.status == 'preagendado' %}
+    <section>
+        <div class="container">
+            <h2>Domicilio <a id="domicilio_modal_1" href="{% url 'drivemee:solicitud-domicilio-create' source=source status=status pk=solicitud.pk %}">Agregar Domicilio</a></h2>
+            
+        </div> <!-- container -->
+    </section>
+    {% endif %}
+    {% endif %}
+	<section>
+		<div class="container">
+			<div class="row">
+    			{% if solicitud.status == 'abierto' or solicitud.status == 'agendado' or solicitud.status == 'proceso' or solicitud.status == 'preagendado' %}
+				<div class="col-sm-6">
+                    <input type="button" id="cancel_modal" class="btn btn-warning " href="{% url 'drivemee:solicitud-cancel' source=source status=status pk=solicitud.pk %}" value="Cancelar Solicitud"/>
+				</div>
+				{% endif %}
+				<div class="col-sm-6 text-right">
+					<a class="btn btn-secondary" href="{% url 'drivemee:solicitudes' source=source status=status %}" role="button">Continuar</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+	<br>
+    {% if solicitud.snoozereasons.all %}
+    <section>
+        <div class="container">
+            <h3>Motivos para posponer</h3>
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Pospuesto hasta</th>
+                                <th>Motivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    		{% for reason in solicitud.snoozereasons.all %}
+                            <tr>
+                                <td>{{ reason.timestamp|date:"d/M/Y H:i" }}</td>
+                                <td>{{ reason.snoozed_until_date|date:"d/M/Y H:i" }}</td>
+                                <td>{{ reason.motivo }}</td>
+                            </tr>
+                    {% endfor %}
+                        </tbody>
+                    </table>
+                </div> <!-- col -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    {% endif %}
+
+{% endblock %}
+
+{% block bootstrap3_extra_script %}
+<script>
+    $(document).ready(function(){
+        {% for direccion in direcciones_list %}
+        {% if direccion.longitud and direccion.latitud %}
+        crearMapa({{ direccion.latitud }}, {{ direccion.longitud }},'map{{ forloop.counter }}');
+        {% endif %}
+        {% endfor %}
+    });
+    function crearMapa(lat,lng,canvas) {
+        var myLatLng = {lat: lat, lng: lng};
+        var mapCanvas = document.getElementById(canvas);
+        var mapOptions = {
+            center: myLatLng,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map( mapCanvas, mapOptions );
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map
+        });    
+    }
+</script>
+{% endblock %}
