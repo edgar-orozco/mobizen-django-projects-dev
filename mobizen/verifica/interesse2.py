@@ -270,12 +270,22 @@ def parse_cotizacion(aseguradora, id_aseguradora):
 
 def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo='1'):
 ## API Key Dev
-    apikey = 'af508bca-6438-5acc-b358-e9f9f903c861'
-    url = 'http://api_dev.interesse.com.mx/api/autos/cotizaciones'
+    apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d'
+    url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
     
     idCliente='557'
 ### Parametros obligatorios
-###
+###http://api.interesse.com.mx/api/autos/cotizaciones?
+# id_auto=14623
+# id_subgrupo=557
+# id_paquete=1
+# id_forma_pago=1
+# codigo_postal=03300
+# udi
+# email_usuario=jhuerta88@gmail.com
+# nombre_usuario=jorge
+# apellido_paterno_usuario=huerta
+# apellido_materno_usuario=l
     id_subgrupo = idCliente
     id_auto = idAuto
 ### Plazo viene como Mensual, Trimestral, Semestral o Anual
@@ -334,7 +344,7 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
         r = requests.get(url, params=payload, headers=headers, timeout=59.00)
     except requests.exceptions.Timeout:
         print 'error'
-##    return r
+        return r
     if r.status_code == 200:
         r.encoding = 'utf-8'
         content = r.json()
@@ -354,11 +364,7 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
                     parseado = parse_cotizacion(json_aseguradora, id_aseguradora)
                     if parseado:
                     ## Agregamos este valor aqui para no pasar los parametros al parser
-                        encode_string = 'ida='+idAuto+'&cp='+cp+'&idp='+paquete+'&idf='+plazo+'&fiv='+inicioVigencia+'&idas='+id_aseguradora
-                        if placa is not None:
-                            encode_string += '&plc='+placa
-                        if serie is not None:
-                            encode_string += '&ser='+serie
+                        encode_string = 'ida='+str(idAuto)+'&cp='+cp+'&idp='+str(paquete)+'&idf='+str(plazo)+'&fiv='+inicioVigencia+'&idas='+str(id_aseguradora)
                         encoded_emision_string = base64.b64encode(encode_string)
                         parseado['emision'] = [{'url': emision_url+encoded_emision_string}]
                         cotizaciones.append(parseado)
