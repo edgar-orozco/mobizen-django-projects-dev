@@ -154,7 +154,7 @@ class ApiGobInfoConsumer(object):
                 and self.ejecucion_finanzas == False:
 
             self.verificaciones()
-            self.finanzas()
+            self.infracciones()
             self.tenencias()
 
         respuesta_dict = {
