@@ -36,9 +36,9 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
 
     fecha_inicio_vigencia = inicioVigencia
     id_paquete = paquete
+    id_subgrupo = idCliente
 ### Parametros opcionales
 ###
-    id_subgrupo = None
     id_aseguradora = None
     valor_factura = None
     id_uso = None
@@ -328,7 +328,7 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
         'apellido_materno_usuario':'ND',
         'fecha_inicio_vigencia':fecha_inicio_vigencia,
         'id_paquete':id_paquete,
-        'id_subgrupo':id_subgrupo,
+        'id_subgrupo':idCliente,
         'id_aseguradora':id_aseguradora,
         'valor_factura':valor_factura,
         'id_uso':id_uso,
