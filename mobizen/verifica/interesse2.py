@@ -5,7 +5,7 @@ import math
 from verifica import slackbot
 from verifica import models
 
-def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, idCliente='557', valorFactura='', placa=None, serie=None, deviceToken=None, telefono=None, nombre=None, email=None, descripcion=None):
+def ns_request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, idCliente='557', valorFactura='', placa=None, serie=None, deviceToken=None, telefono=None, nombre=None, email=None, descripcion=None):
     if not telefono:
         telefono = '55555555'
     if not email:
@@ -376,10 +376,8 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
         return [{'status':r.status_code}]
 
 
-def tc(id_auto, cp, paquete, plazo, inicio_vigencia, cod_colonia, id_cliente='557', valor_factura='', placa=None, serie=None,
+def request_cotizacion(id_auto, cp, paquete, plazo, inicio_vigencia, cod_colonia, id_cliente='557', valor_factura='', placa=None, serie=None,
        device_token=None, telefono="55245044", nombre="ND", email="noreply@mobizen.com.mx", descripcion=None):
-
-
     ## API Key Prod
     apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d'
     url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
