@@ -64,7 +64,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
         'apellido_materno_usuario':'ND',
         'fecha_inicio_vigencia':fecha_inicio_vigencia,
         'id_paquete':id_paquete,
-        'id_subgrupo':idCliente,
+        'id_subgrupo':557,
         'id_aseguradora':id_aseguradora,
         'valor_factura':valor_factura,
         'id_uso':id_uso,
@@ -119,6 +119,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
             cotizaciones = []
             emision_url = 'https://autos.interesse.com.mx/autos/app/cliente/mobizen/data/'
             data = content.get('data')
+            print data
             json_cotizaciones = data.get('cotizaciones')
             for key, json_aseguradora in json_cotizaciones.iteritems():
                 if 'aseguradora' in json_aseguradora:
