@@ -309,7 +309,8 @@ class CotizadorViewSet(viewsets.ModelViewSet):
             if models.Aseguradora.objects.filter(name__icontains=serializer.data['aseguradora']):
                 compania = models.Aseguradora.objects.filter(name__icontains=serializer.data['aseguradora'])[0]
             else:
-                compania, created_aseguradora = models.Aseguradora.objects.get_or_create(name=serializer.data['aseguradora'])                
+                compania, created_aseguradora = models.Aseguradora.objects.get_or_create(
+                    name=serializer.data['aseguradora'])
             paq = models.Paquete.objects.get(valor_interesse=serializer.data['paquete'])
             plz = models.Plazo.objects.get(valor_interesse=serializer.data['plazo'])
             cotizacion = models.Cotizacion(client=self.request.user.client,
@@ -378,7 +379,13 @@ class CotizadorView(APIView):
             descripcion = None
             if 'descripcion' in serializer.data:
                 descripcion = serializer.data['descripcion']
-            cotizacion = interesse.request_cotizacion(idAuto=serializer.data['idAuto'], cp=serializer.data['cp'], paquete=serializer.data['paquete'], plazo=serializer.data['plazo'], inicioVigencia=serializer.data['inicioVigencia'], codColonia=serializer.data['codColonia'], placa=placa, serie=serie, deviceToken=deviceToken, telefono=telefono, nombre=nombre, email=email, descripcion=descripcion)
+            cotizacion = interesse.request_cotizacion(id_auto=serializer.data['idAuto'], cp=serializer.data['cp'],
+                                                      paquete=serializer.data['paquete'],
+                                                      plazo=serializer.data['plazo'],
+                                                      inicio_vigencia=serializer.data['inicioVigencia'],
+                                                      cod_colonia=serializer.data['codColonia'], placa=placa,
+                                                      serie=serie, device_token=deviceToken, telefono=telefono,
+                                                      nombre=nombre, email=email, descripcion=descripcion)
             return Response(cotizacion)
         else:
             return Response(serializer.errors,
