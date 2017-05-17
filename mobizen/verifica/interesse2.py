@@ -96,6 +96,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
     if descripcion:
         comparacion.descripcion = descripcion
     try:
+        print payload
         r = requests.get(url, data=payload, headers=headers, timeout=29.00)
     except requests.exceptions.Timeout:
         slackbot.send_message(message='Cotizacion: Timeout, idAuto: '+str(idAuto), channel='#cotizaciones')
