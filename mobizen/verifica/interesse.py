@@ -110,7 +110,6 @@ def parse_cotizacion(aseguradora, id_aseguradora):
         #         pagos += [{'num' : num, 'total' : total}]
         pagos += [{'num': 1, 'total': ptotal}]
         seguro['pagos'] = pagos
-        print seguro
         return seguro
     except:
         return None
@@ -124,30 +123,30 @@ def request_cotizacion(id_auto, cp, paquete, plazo, inicio_vigencia, cod_colonia
     plazo_multianual = 12
     id_subgrupo = id_cliente
 
-    headers = {'content-type': 'application/json', 'apikey': apikey}
+    headers = {"content-type": "application/json", "apikey": apikey}
     payload = {
-        'id_auto': id_auto,
-        'id_forma_pago': plazo,
-        'codigo_postal': cp,
-        'udi': None,
-        'email_usuario': email,
-        'numero_telefono': telefono,
-        'nombre_usuario': nombre,
-        'apellido_paterno_usuario': 'ND',
-        'apellido_materno_usuario': 'ND',
-        'fecha_inicio_vigencia': inicio_vigencia,
-        'id_paquete': paquete,
-        'id_subgrupo': id_subgrupo,
-        'id_aseguradora': None,
-        'valor_factura': valor_factura,
-        'id_uso': None,
-        'id_tipo': None,
-        'edad_conductor': None,
-        'id_moneda': None,
-        'coberturas': None,
-        'adaptaciones_especiales': None,
-        'equipo_especial': None,
-        'plazo_multianual': plazo_multianual,
+        "id_auto": id_auto,
+        "id_forma_pago": plazo,
+        "codigo_postal": cp,
+        "udi": None,
+        "email_usuario": email,
+        "numero_telefono": telefono,
+        "nombre_usuario": nombre,
+        "apellido_paterno_usuario": "ND",
+        "apellido_materno_usuario": "ND",
+        "fecha_inicio_vigencia": inicio_vigencia,
+        "id_paquete": paquete,
+        "id_subgrupo": id_subgrupo,
+        "id_aseguradora": None,
+        "valor_factura": valor_factura,
+        "id_uso": None,
+        "id_tipo": None,
+        "edad_conductor": None,
+        "id_moneda": None,
+        "coberturas": None,
+        "adaptaciones_especiales": None,
+        "equipo_especial": None,
+        "plazo_multianual": plazo_multianual,
     }
     try:
         r = requests.get(url, params=payload, headers=headers, timeout=59.00)
