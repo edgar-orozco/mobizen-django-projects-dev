@@ -17,8 +17,8 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
     # apikey = 'af508bca-6438-5acc-b358-e9f9f903c861'
     # url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
 ## API Key Prod
-    apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d '
-    url = 'http://api.interesse.com.mx/api/autos/cotizaciones'    
+    apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d'
+    url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
 
 ### Parametros obligatorios
 ###
@@ -96,15 +96,15 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
     if descripcion:
         comparacion.descripcion = descripcion
     try:
-        r = requests.post(url, data=payload, headers=headers, timeout=29.00)
+        r = requests.get(url, data=payload, headers=headers, timeout=29.00)
     except requests.exceptions.Timeout:
-        slackbot.send_message(message='Cotizacion: Timeout, idAuto: '+idAuto, channel='#cotizaciones')
+        slackbot.send_message(message='Cotizacion: Timeout, idAuto: '+str(idAuto), channel='#cotizaciones')
         comparacion.timeout = True
         comparacion.elapsed = r.elapsed.total_seconds()
         comparacion.save()
     comparacion.elapsed = r.elapsed.total_seconds()
     if r.status_code == 200:
-        slackbot.send_message(message='Nueva Cotizacion, idAuto: '+idAuto, channel='#cotizaciones')        
+        slackbot.send_message(message='Nueva Cotizacion, idAuto: '+str(idAuto), channel='#cotizaciones')
         r.encoding = 'utf-8'
         content = r.json()
         try:
@@ -113,7 +113,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
             content = None
             comparacion.error_message = 'JSON inválido'
             comparacion.save()
-            slackbot.send_message(message='Fallo cotizacion: Error JSON, idAuto: '+idAuto, channel='#cotizaciones')
+            slackbot.send_message(message='Fallo cotizacion: Error JSON, idAuto: '+str(idAuto), channel='#cotizaciones')
             return [{'status':'No JSON object could be decoded'}]
         if content:            
             cotizaciones = []
