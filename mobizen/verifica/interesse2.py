@@ -64,7 +64,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
         'apellido_materno_usuario':'ND',
         'fecha_inicio_vigencia':fecha_inicio_vigencia,
         'id_paquete':id_paquete,
-        'id_subgrupo':id_subgrupo,
+        'id_subgrupo':idCliente,
         'id_aseguradora':id_aseguradora,
         'valor_factura':valor_factura,
         'id_uso':id_uso,
