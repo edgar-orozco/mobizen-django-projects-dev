@@ -116,7 +116,7 @@ def request_cotizacion(idAuto, cp, paquete, plazo, inicioVigencia, codColonia, i
             comparacion.save()
             slackbot.send_message(message='Fallo cotizacion: Error JSON, idAuto: '+str(idAuto), channel='#cotizaciones')
             return [{'status':'No JSON object could be decoded'}]
-        if content:            
+        if content:
             cotizaciones = []
             emision_url = 'https://autos.interesse.com.mx/autos/app/cliente/mobizen/data/'
             data = content.get('data')
@@ -168,13 +168,13 @@ def parse_cotizacion(aseguradora, id_aseguradora):
 	    if id_aseguradora == 22:
 	        depositoBancario = True
 	    seguro = {'aseguradora' : compania, 'hasMeses' : False, 'depositoBancario':depositoBancario}
-	
+
 	    resumen = aseguradora.get('resumen_coberturas_asegurado')
-	
+
 	    # coberturas
 	    coberturas = aseguradora.get('coberturas')
 	    seguro_coberturas = {}
-	    
+
 	    # inicializa valores
 	    danosMateriales = False
 	    sumaDanosMateriales = 0
@@ -188,10 +188,10 @@ def parse_cotizacion(aseguradora, id_aseguradora):
 	    gastosMedicos = False
 	    sumaGastosMedicos = 0
 	    deducibleGastosMedicos = 0
-	
+
 	    asistenciaVial = resumen.get('asistencia_vial')
 	    asistenciaLegal = resumen.get('asistencia_legal')
-	    
+
 	    if 'danos_materiales' in resumen:
 	        sumaDanosMateriales = resumen.get('danos_materiales')
 	        deducibleDanosMateriales = resumen.get('deducible_danos_materiales')
@@ -251,12 +251,12 @@ def parse_cotizacion(aseguradora, id_aseguradora):
 	    seguro_coberturas['asistenciaVial'] = asistenciaVial
 	    seguro_coberturas['asistenciaLegal'] = asistenciaLegal
 	    seguro['cobertura'] = seguro_coberturas
-	    
+
 	    # costos
 	    costos = aseguradora.get('costos')
 	    ptotal = costos.get('prima_total')
 	    seguro['costoTotal'] = int(math.ceil(float(ptotal)))
-	    
+
 	#     recibos = aba_root.find('INCISOS//RECIBOS').getchildren()
 	    pagos = []
 	#     for recibo in recibos:
@@ -274,7 +274,7 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
 ## API Key Dev
     apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d'
     url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
-    
+
     idCliente='557'
 ### Parametros obligatorios
 ###http://api.interesse.com.mx/api/autos/cotizaciones?
@@ -349,13 +349,12 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
         return r
     if r.status_code == 200:
         r.encoding = 'utf-8'
-        content = r.json()
         try:
             content = r.json()
         except:
             content = None
             return [{'status':'No JSON object could be decoded'}]
-        if content:            
+        if content:
             cotizaciones = []
             emision_url = 'https://autos.interesse.com.mx/autos/app/cliente/mobizen/data/'
             data = content.get('data')
@@ -377,25 +376,71 @@ def test_cotizacion(inicioVigencia, idAuto = '1', cp='06700', paquete='1', plazo
         return [{'status':r.status_code}]
 
 
+def tc(id_auto, cp, paquete, plazo, inicio_vigencia, cod_colonia, id_cliente='557', valor_factura='', placa=None, serie=None,
+       device_token=None, telefono="55245044", nombre="ND", email="noreply@mobizen.com.mx", descripcion=None):
 
 
+    ## API Key Prod
+    apikey = '41b317e3-741b-5bae-97b2-5b19a9e8e26d'
+    url = 'http://api.interesse.com.mx/api/autos/cotizaciones'
 
+    plazo_multianual = 12
+    id_subgrupo = id_cliente
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    headers = {'content-type': 'application/json', 'apikey': apikey}
+    payload = {
+        'id_auto': id_auto,
+        'id_forma_pago': plazo,
+        'codigo_postal': cp,
+        'udi': None,
+        'email_usuario': email,
+        'numero_telefono': telefono,
+        'nombre_usuario': nombre,
+        'apellido_paterno_usuario': 'ND',
+        'apellido_materno_usuario': 'ND',
+        'fecha_inicio_vigencia': inicio_vigencia,
+        'id_paquete': paquete,
+        'id_subgrupo': id_subgrupo,
+        'id_aseguradora': None,
+        'valor_factura': valor_factura,
+        'id_uso': None,
+        'id_tipo': None,
+        'edad_conductor': None,
+        'id_moneda': None,
+        'coberturas': None,
+        'adaptaciones_especiales': None,
+        'equipo_especial': None,
+        'plazo_multianual': plazo_multianual,
+    }
+    try:
+        r = requests.get(url, params=payload, headers=headers, timeout=59.00)
+    except requests.exceptions.Timeout:
+        print 'error'
+        return r
+    if r.status_code == 200:
+        r.encoding = 'utf-8'
+        try:
+            content = r.json()
+        except:
+            return [{'status': 'No JSON object could be decoded'}]
+        if content:
+            cotizaciones = []
+            emision_url = 'https://autos.interesse.com.mx/autos/app/cliente/mobizen/data/'
+            data = content.get('data')
+            json_cotizaciones = data.get('cotizaciones')
+            for key, json_aseguradora in json_cotizaciones["1"].iteritems():
+                if 'aseguradora' in json_aseguradora:
+                    id_aseguradora = int(key)
+                    parseado = parse_cotizacion(json_aseguradora, id_aseguradora)
+                    if parseado:
+                        ## Agregamos este valor aqui para no pasar los parametros al parser
+                        encode_string = 'ida=' + str(id_auto) + '&cp=' + cp + '&idp=' + str(paquete) + '&idf=' + str(
+                            plazo) + '&fiv=' + inicio_vigencia + '&idas=' + str(id_aseguradora)
+                        encoded_emision_string = base64.b64encode(encode_string)
+                        parseado['emision'] = [{'url': emision_url + encoded_emision_string}]
+                        cotizaciones.append(parseado)
+            return {'seguros': cotizaciones}
+        else:
+            return [{'status': 'Error desconocido'}]
+    else:
+        return [{'status': r.status_code}]
