@@ -163,6 +163,7 @@ class VerificacionView(APIView):
         if (placa_detector.parse_placa(clean_placa).estado == 'DIF' or check_type == 'full') or check_type != 'full':
             try:
                 data = ApiGobInfoConsumer(placa=placa).get(tipo=check_type)
+                return Response(data);
             except ValueError:
                 return Response({'error':'parse error'},
                                 status=status.HTTP_400_BAD_REQUEST)
