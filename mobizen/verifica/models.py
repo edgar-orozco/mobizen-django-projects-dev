@@ -309,10 +309,10 @@ class Vehiculo(models.Model):
         unique_together = (("client", "placa"),)
     def __unicode__(self):
         return unicode(self.alias)
-    def fetch_info(self, send_push=False, save_tenencias=False):
+    def fetch_info(self, send_push=False, save_tenencias=False, tipo=''):
         placa = self.placa.replace(' ','').replace('-','')
         try:
-            data = ApiGobInfoConsumer(placa).get()
+            data = ApiGobInfoConsumer(placa).get(tipo)
         except ValueError:
 #             raise requests.exceptions.RequestException(req)
             return False

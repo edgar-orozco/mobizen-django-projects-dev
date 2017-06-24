@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
 import datetime
-import logging
 from lxml import html
 from lxml.etree import tostring
 
@@ -43,13 +42,6 @@ class ApiGobInfoConsumer(object):
 
         self.placa = placa.replace(' ', '').replace('-', '').upper()
         self.resultado = {'verificaciones': [], 'infracciones': [], 'tenencias': ''}
-
-      	self.logger = logging.getLogger('testlogging')
-        hdlr = logging.FileHandler('/tmp/apigobinfo.log')
-        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-        hdlr.setFormatter(formatter)
-        self.logger.addHandler(hdlr)
-        self.logger.setLevel(logging.INFO)
 
     def verificaciones(self):
         self.ejecucion_verificaciones = True
@@ -153,7 +145,7 @@ class ApiGobInfoConsumer(object):
                 and self.ejecucion_verificaciones == False \
                 and self.ejecucion_finanzas == False:
 
-            self.verificaciones()
+            #self.verificaciones()
             self.infracciones()
             self.tenencias()
 
@@ -168,7 +160,6 @@ class ApiGobInfoConsumer(object):
         self.ejecucion_infracciones = False
         self.ejecucion_verificaciones = False
         self.ejecucion_finanzas = False
-	self.logger.info(respuesta_dict)
         return respuesta_dict
 
     def _finanzas_cdmx_parser_infraccion(self, placa, con_lineacaptura):
