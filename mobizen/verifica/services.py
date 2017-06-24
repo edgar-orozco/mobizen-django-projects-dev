@@ -139,7 +139,7 @@ class ApiGobInfoConsumer(object):
             self.infracciones()
         if tipo == 'tenencias' or self.ejecucion_tenencias:
             self.tenencias()
-        if (tipo == '' or tipo == 'all') \
+        if (tipo == '' or tipo == 'full') \
                 and self.ejecucion_tenencias == False \
                 and self.ejecucion_infracciones == False \
                 and self.ejecucion_verificaciones == False \
