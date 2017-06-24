@@ -162,12 +162,15 @@ class VerificacionView(APIView):
         
         if (placa_detector.parse_placa(clean_placa).estado == 'DIF' or check_type == 'full') or check_type != 'full':
             try:
-                data = ApiGobInfoConsumer(placa).get(tipo=check_type)
+                data = ApiGobInfoConsumer(placa=placa).get(tipo=check_type)
             except ValueError:
                 return Response({'error':'parse error'},
                                 status=status.HTTP_400_BAD_REQUEST)
             if 'consulta' in data:
-                if check_type == 'full':
+                if check_type == 'full' \
+                        or check_type == 'infracciones' \
+                        or check_type == 'verificaciones' \
+                        or check_type == 'tenencias':
                     return Response(data)
                 else:
                     consulta_dict = data.get('consulta')
