@@ -136,7 +136,7 @@ class ApiGobInfoConsumer(object):
             #             raise requests.exceptions.RequestException(req)
             return False
         if 'external_server_response' in data:
-            self.resultado['tenencias_external_server_response'] = data['tenencias_external_server_response']
+            self.resultado['tenencias_external_server_response'] = data['external_server_response']
         if 'tiene_adeudos' in data and data['tiene_adeudos'] == "1":
             tieneadeudos = "0"
             if len(data['adeudos']) > 1:
