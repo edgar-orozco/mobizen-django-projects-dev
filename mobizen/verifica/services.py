@@ -41,7 +41,14 @@ class ApiGobInfoConsumer(object):
         self.ejecucion_finanzas = False
 
         self.placa = placa.replace(' ', '').replace('-', '').upper()
-        self.resultado = {'verificaciones': [], 'infracciones': [], 'tenencias': ''}
+        self.resultado = {
+            'verificaciones_external_server_response': '',
+            'infracciones_external_server_response': '',
+            'tenencias_external_server_response': '',
+            'verificaciones': [],
+            'infracciones': [],
+            'tenencias': ''
+        }
 
     def verificaciones(self):
         self.ejecucion_verificaciones = True
@@ -157,6 +164,9 @@ class ApiGobInfoConsumer(object):
         respuesta_dict = {
             'consulta': {
                 'placa': self.placa,
+                'verificaciones_external_server_response': self.resultado['verificaciones_external_server_response'],
+                'tenencias_external_server_response': self.resultado['tenencias_external_server_response'],
+                'infracciones_external_server_response': self.resultado['infracciones_external_server_response'],
                 'verificaciones': self.resultado['verificaciones'],
                 'tenencias': self.resultado['tenencias'],
                 'infracciones': self.resultado['infracciones']
